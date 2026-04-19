@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教学素材中心 - 北疆红韵</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .resource-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; margin-top: 1rem; box-shadow: var(--shadow); }
+        .resource-table th, .resource-table td { padding: 1.5rem; text-align: left; border-bottom: 1px solid #eee; }
+        .resource-table th { background: #f8f9fa; font-weight: bold; color: var(--primary-red); }
+        .download-btn { color: var(--primary-red); cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: bold; }
+        .download-btn:hover { color: var(--primary-dark); }
+        .type-badge { padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; }
+        .badge-ppt { background: #FFF5F0; color: #E45B00; border: 1px solid #FFD8C2; }
+        .badge-doc { background: #F0F7FF; color: #0078D4; border: 1px solid #C2E0FF; }
+        .badge-quiz { background: #F0FFF4; color: #228B22; border: 1px solid #C2FFD8; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">首页</a></li>
+                <li class="nav-item">
+                    <a href="spirit-anti-japanese.html">东北四大精神 <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="spirit-anti-japanese.html">抗联精神</a>
+                        <a href="spirit-beidahuang.html">北大荒精神</a>
+                        <a href="spirit-daqing.html">大庆精神</a>
+                        <a href="spirit-ironman.html">铁人精神</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="spirit-longjiang.html">龙江精神</a></li>
+                <li class="nav-item"><a href="articles.html">思政图文</a></li>
+                <li class="nav-item"><a href="videos.html">视频资源</a></li>
+                <li class="nav-item"><a href="resources.html" class="active">教学素材</a></li>
+                <li class="nav-item"><a href="literature.html">文献资料</a></li>
+                <li class="nav-item"><a href="classroom.html">科普园地</a></li>
+                <li class="nav-item"><a href="about.html">项目介绍</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>教学素材中心</h2>
+            <p>为高校思政课教师及学生提供专业、严谨、成体系的红色教学资源</p>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">全部素材</button>
+            <button class="filter-btn" data-filter="plan">思政教案</button>
+            <button class="filter-btn" data-filter="ppt">PPT课件</button>
+            <button class="filter-btn" data-filter="quiz">学习习题</button>
+            <button class="filter-btn" data-filter="outline">备课提纲</button>
+        </div>
+
+        <table class="resource-table">
+            <thead>
+                <tr>
+                    <th>素材名称</th>
+                    <th>分类</th>
+                    <th>更新日期</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="filter-item-card" data-category="ppt">
+                    <td><i class="far fa-file-powerpoint" style="color: #E45B00;"></i> 东北四大精神深度解析专题课件</td>
+                    <td><span class="type-badge badge-ppt">PPT课件</span></td>
+                    <td>2024-04-12</td>
+                    <td><a href="#" class="resource-download download-btn" data-file="东北四大精神专题.pptx"><i class="fas fa-download"></i> 下载</a></td>
+                </tr>
+                <tr class="filter-item-card" data-category="plan">
+                    <td><i class="far fa-file-word" style="color: #0078D4;"></i> 《龙江红色地标巡礼》教学设计方案</td>
+                    <td><span class="type-badge badge-doc">思政教案</span></td>
+                    <td>2024-04-08</td>
+                    <td><a href="#" class="resource-download download-btn" data-file="教学设计方案.docx"><i class="fas fa-eye"></i> 预览</a></td>
+                </tr>
+                <tr class="filter-item-card" data-category="quiz">
+                    <td><i class="far fa-file-alt" style="color: #228B22;"></i> 2024版大学生红色文化知识竞赛题库</td>
+                    <td><span class="type-badge badge-quiz">学习习题</span></td>
+                    <td>2024-03-30</td>
+                    <td><a href="#" class="resource-download download-btn" data-file="红色知识题库.pdf"><i class="fas fa-download"></i> 下载</a></td>
+                </tr>
+                <tr class="filter-item-card" data-category="outline">
+                    <td><i class="far fa-file-pdf" style="color: #c0392b;"></i> 铁人精神专题讲座备课参考提纲</td>
+                    <td><span class="type-badge badge-doc">备课提纲</span></td>
+                    <td>2024-03-25</td>
+                    <td><a href="#" class="resource-download download-btn" data-file="备课提纲.pdf"><i class="fas fa-download"></i> 下载</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>北疆红韵</h4>
+                <p>大学生创新创业项目申报作品</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
+            </div>
+            <div>
+                <h4>快速链接</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="spirit-anti-japanese.html">四大精神</a></li>
+                    <li><a href="spirit-longjiang.html">龙江精神</a></li>
+                    <li><a href="about.html">项目介绍</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>资源分类</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="articles.html">思政图文</a></li>
+                    <li><a href="videos.html">视频资源</a></li>
+                    <li><a href="resources.html">教学素材</a></li>
+                    <li><a href="literature.html">文献资料</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>版权与来源说明</h4>
+                <p style="font-size: 0.85rem;">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 备案号：黑ICP备XXXXXXXX号</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

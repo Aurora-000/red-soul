@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>思政图文库 - 北疆红韵</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .article-card { display: flex; flex-direction: column; height: 100%; }
+        .article-img { height: 180px; width: 100%; object-fit: cover; }
+        .article-body { padding: 20px; flex-grow: 1; }
+        .article-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px; }
+        .article-source { color: var(--primary-red); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">首页</a></li>
+                <li class="nav-item">
+                    <a href="spirit-anti-japanese.html">东北四大精神 <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="spirit-anti-japanese.html">抗联精神</a>
+                        <a href="spirit-beidahuang.html">北大荒精神</a>
+                        <a href="spirit-daqing.html">大庆精神</a>
+                        <a href="spirit-ironman.html">铁人精神</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="spirit-longjiang.html">龙江精神</a></li>
+                <li class="nav-item"><a href="articles.html" class="active">思政图文</a></li>
+                <li class="nav-item"><a href="videos.html">视频资源</a></li>
+                <li class="nav-item"><a href="resources.html">教学素材</a></li>
+                <li class="nav-item"><a href="literature.html">文献资料</a></li>
+                <li class="nav-item"><a href="classroom.html">科普园地</a></li>
+                <li class="nav-item"><a href="about.html">项目介绍</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>思政图文资源库</h2>
+            <p>深度整合龙江红色图文资料，涵盖理论解读、红色故事与权威发布</p>
+        </div>
+        
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="theory">理论文章</button>
+            <button class="filter-btn" data-filter="post">学习推文</button>
+            <button class="filter-btn" data-filter="story">红色故事</button>
+            <button class="filter-btn" data-filter="expert">权威解读</button>
+        </div>
+
+        <div class="article-grid">
+            <!-- 理论文章 -->
+            <div class="card article-card filter-item-card" data-category="theory">
+                <img src="https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070" class="article-img">
+                <div class="article-body">
+                    <div class="article-meta">2024-04-18 | 来源：<span class="article-source">人民网</span></div>
+                    <h3>论东北抗联精神的时代价值及其传承路径</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">深入挖掘抗联精神在现代化建设中的精神支柱作用，为新时代振兴提供力量...</p>
+                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 15px;">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 学习推文 -->
+            <div class="card article-card filter-item-card" data-category="post">
+                <img src="https://images.unsplash.com/photo-1518111713580-07718e268a71?q=80&w=2070" class="article-img">
+                <div class="article-body">
+                    <div class="article-meta">2024-04-15 | 来源：<span class="article-source">学习强国</span></div>
+                    <h3>【图解】带你读懂北大荒精神的四个核心要义</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">通过生动的图表与数据，还原北大荒从荒原变粮仓的辉煌奋斗史...</p>
+                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 15px;">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 红色故事 -->
+            <div class="card article-card filter-item-card" data-category="story">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070" class="article-img">
+                <div class="article-body">
+                    <div class="article-meta">2024-04-10 | 来源：<span class="article-source">黑龙江党史网</span></div>
+                    <h3>铁人王进喜：用身体搅拌泥浆的震撼瞬间</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">回顾1960年那场惊心动魄的石油大会战，感受铁人钢铁般的意志...</p>
+                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 15px;">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 权威解读 -->
+            <div class="card article-card filter-item-card" data-category="expert">
+                <img src="https://images.unsplash.com/photo-1516937622178-745583720b1c?q=80&w=2070" class="article-img">
+                <div class="article-body">
+                    <div class="article-meta">2024-04-05 | 来源：<span class="article-source">新华网</span></div>
+                    <h3>专家解读：大庆精神如何助力新质生产力发展</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">著名学者深入分析大庆精神中“求实”品格在科技创新中的新应用...</p>
+                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 15px;">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 新增素材填充 -->
+            <div class="card article-card filter-item-card" data-category="theory">
+                <div class="article-body">
+                    <div class="article-meta">2024-03-20 | 来源：<span class="article-source">黑龙江日报</span></div>
+                    <h3>深刻把握龙江红色精神的时代内涵</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">在新的历史起点上，如何将红色精神转化为推动高质量发展的强大动力...</p>
+                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 15px;">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card article-card filter-item-card" data-category="story">
+                <div class="article-body">
+                    <div class="article-meta">2024-03-15 | 来源：<span class="article-source">抗联纪念馆</span></div>
+                    <h3>赵一曼：一封跨越时空的示儿书</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">还原巾帼英雄赵一曼英勇就义前的感人细节与家国情怀...</p>
+                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 15px;">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card article-card filter-item-card" data-category="post">
+                <div class="article-body">
+                    <div class="article-meta">2024-03-10 | 来源：<span class="article-source">青年龙江</span></div>
+                    <h3>【推文】这届年轻人为什么爱上北大荒？</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">当代青年在黑土地上的奋斗故事，赋予了老精神新的生命力...</p>
+                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 15px;">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- 更多文章可在此继续添加，满足海量素材需求 -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>北疆红韵</h4>
+                <p>大学生创新创业项目申报作品</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
+            </div>
+            <div>
+                <h4>快速链接</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="spirit-anti-japanese.html">四大精神</a></li>
+                    <li><a href="spirit-longjiang.html">龙江精神</a></li>
+                    <li><a href="about.html">项目介绍</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>资源分类</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="articles.html">思政图文</a></li>
+                    <li><a href="videos.html">视频资源</a></li>
+                    <li><a href="resources.html">教学素材</a></li>
+                    <li><a href="literature.html">文献资料</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>版权与来源说明</h4>
+                <p style="font-size: 0.85rem;">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 备案号：黑ICP备XXXXXXXX号</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

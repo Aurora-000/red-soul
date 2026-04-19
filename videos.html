@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频资源中心 - 北疆红韵</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .video-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
+        .video-thumb { position: relative; height: 200px; background: #000; display: flex; justify-content: center; align-items: center; color: white; font-size: 3.5rem; cursor: pointer; }
+        .video-thumb img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.75; transition: 0.3s; }
+        .video-thumb:hover img { opacity: 0.5; transform: scale(1.05); }
+        .video-thumb i { position: relative; z-index: 1; text-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .video-content { padding: 20px; }
+        .video-tag { font-size: 0.75rem; background: #FFF5F5; color: var(--primary-red); padding: 4px 12px; border-radius: 4px; border: 1px solid #FFE0E0; }
+        .video-meta { font-size: 0.8rem; color: var(--text-light); margin-top: 10px; display: flex; justify-content: space-between; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">首页</a></li>
+                <li class="nav-item">
+                    <a href="spirit-anti-japanese.html">东北四大精神 <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="spirit-anti-japanese.html">抗联精神</a>
+                        <a href="spirit-beidahuang.html">北大荒精神</a>
+                        <a href="spirit-daqing.html">大庆精神</a>
+                        <a href="spirit-ironman.html">铁人精神</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="spirit-longjiang.html">龙江精神</a></li>
+                <li class="nav-item"><a href="articles.html">思政图文</a></li>
+                <li class="nav-item"><a href="videos.html" class="active">视频资源</a></li>
+                <li class="nav-item"><a href="resources.html">教学素材</a></li>
+                <li class="nav-item"><a href="literature.html">文献资料</a></li>
+                <li class="nav-item"><a href="classroom.html">科普园地</a></li>
+                <li class="nav-item"><a href="about.html">项目介绍</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>红色视频资源中心</h2>
+            <p>收录精选思政微课、红色纪录片与珍贵历史影像资料</p>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">全部视频</button>
+            <button class="filter-btn" data-filter="micro">思政微课</button>
+            <button class="filter-btn" data-filter="doc">红色纪录片</button>
+            <button class="filter-btn" data-filter="lecture">精神宣讲</button>
+            <button class="filter-btn" data-filter="history">历史影像</button>
+        </div>
+        
+        <div class="video-grid">
+            <div class="card video-card filter-item-card" data-category="doc">
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="video-content">
+                    <span class="video-tag">红色纪录片</span>
+                    <h4 style="margin-top: 10px;">《黑山白水间的英雄史诗》</h4>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">全面记录东北抗日联军在极寒环境下坚持斗争的珍贵影像。</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-clock"></i> 45:00</span>
+                        <span>来源：央视网</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card video-card filter-item-card" data-category="micro">
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="video-content">
+                    <span class="video-tag">思政微课</span>
+                    <h4 style="margin-top: 10px;">【名师讲堂】铁人精神的现代启示</h4>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">哈工大教授深入解析铁人精神如何赋能当代大学生创新创业。</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-clock"></i> 12:30</span>
+                        <span>来源：学习强国</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card video-card filter-item-card" data-category="lecture">
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1516937622178-745583720b1c?q=80&w=2070">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="video-content">
+                    <span class="video-tag">精神宣讲</span>
+                    <h4 style="margin-top: 10px;">大庆精神：老一代石油人的奋斗告白</h4>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">听大庆油田老劳模讲述那段人拉肩扛、干打垒的艰苦岁月。</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-clock"></i> 25:15</span>
+                        <span>来源：黑龙江广播电视台</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card video-card filter-item-card" data-category="history">
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="video-content">
+                    <span class="video-tag">历史影像</span>
+                    <h4 style="margin-top: 10px;">【档案】1947：北大荒第一犁</h4>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">珍贵的黑白纪录片，带你回到北大荒开垦的起点。</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-clock"></i> 08:45</span>
+                        <span>来源：黑龙江省档案馆</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card video-card filter-item-card" data-category="micro">
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="video-content">
+                    <span class="video-tag">思政微课</span>
+                    <h4 style="margin-top: 10px;">三分钟带你了解“三老四严”</h4>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">用现代视角解读传统作风在现代职场中的价值。</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-clock"></i> 03:20</span>
+                        <span>来源：哈尔滨工程大学</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>北疆红韵</h4>
+                <p>大学生创新创业项目申报作品</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
+            </div>
+            <div>
+                <h4>快速链接</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="spirit-anti-japanese.html">四大精神</a></li>
+                    <li><a href="spirit-longjiang.html">龙江精神</a></li>
+                    <li><a href="about.html">项目介绍</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>资源分类</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="articles.html">思政图文</a></li>
+                    <li><a href="videos.html">视频资源</a></li>
+                    <li><a href="resources.html">教学素材</a></li>
+                    <li><a href="literature.html">文献资料</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>版权与来源说明</h4>
+                <p style="font-size: 0.85rem;">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 备案号：黑ICP备XXXXXXXX号</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

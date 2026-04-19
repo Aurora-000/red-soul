@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目介绍 - 北疆红韵</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .intro-card { background: white; padding: 40px; border-radius: 8px; margin-bottom: 30px; box-shadow: var(--shadow); }
+        .intro-card h3 { color: var(--primary-red); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .highlight-box { background: #FFF5F5; border-left: 5px solid var(--primary-red); padding: 20px; margin: 20px 0; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .feature-item { text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 8px; }
+        .feature-item i { font-size: 2.5rem; color: var(--primary-red); margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">首页</a></li>
+                <li class="nav-item">
+                    <a href="spirit-anti-japanese.html">东北四大精神 <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="spirit-anti-japanese.html">抗联精神</a>
+                        <a href="spirit-beidahuang.html">北大荒精神</a>
+                        <a href="spirit-daqing.html">大庆精神</a>
+                        <a href="spirit-ironman.html">铁人精神</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="spirit-longjiang.html">龙江精神</a></li>
+                <li class="nav-item"><a href="articles.html">思政图文</a></li>
+                <li class="nav-item"><a href="videos.html">视频资源</a></li>
+                <li class="nav-item"><a href="resources.html">教学素材</a></li>
+                <li class="nav-item"><a href="literature.html">文献资料</a></li>
+                <li class="nav-item"><a href="classroom.html">科普园地</a></li>
+                <li class="nav-item"><a href="about.html" class="active">项目介绍</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>关于“北疆红韵”项目</h2>
+            <p>大学生创新创业训练计划（大创）入库项目 · 红色思政数字化引领者</p>
+        </div>
+
+        <div class="intro-card">
+            <h3><i class="fas fa-bullseye"></i> 项目研发意义</h3>
+            <p>在“大思政课”建设背景下，黑龙江作为中国革命和建设的重要阵地，拥有丰富的红色文化资源。然而，现有资源存在**分布散、形式旧、获取难**等痛点。“北疆红韵”项目旨在利用数字化技术，深度整合东北抗联精神、北大荒精神、大庆精神、铁人精神等核心思政资源，构建一个集成化、交互式、全天候的红色文化传承平台。</p>
+            <div class="highlight-box">
+                <strong>核心目标：</strong> 让红色文化从“博物馆”走进“云端”，从“书本”走进“学子心田”，实现红色血脉的高效传承。
+            </div>
+        </div>
+
+        <div class="intro-card">
+            <h3><i class="fas fa-rocket"></i> 创新亮点</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-cubes"></i>
+                    <h4>一站式集成</h4>
+                    <p>打破资源孤岛，整合文章、视频、课件、文献于一体，大幅降低师生获取成本。</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>多端自适应</h4>
+                    <p>完美适配PC、平板、手机端，随时随地开启思政学习“指尖模式”。</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-shield"></i>
+                    <h4>权威数据源</h4>
+                    <p>所有素材均来源于人民网、学习强国等权威平台，确保政治方向正确、内容严谨。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-card">
+            <h3><i class="fas fa-users"></i> 应用场景</h3>
+            <ul style="padding-left: 20px; line-height: 2;">
+                <li><strong>高校思政教学：</strong> 为思政课教师提供高质量的PPT课件、音视频素材及教案参考。</li>
+                <li><strong>学生党建活动：</strong> 作为入党积极分子、学生党员理论学习和党日活动的数字化阵地。</li>
+                <li><strong>红色基地宣讲：</strong> 为红色场馆、纪念馆提供轻量化的数字化解说与展示支撑。</li>
+                <li><strong>社会大众科普：</strong> 满足社会公众对东北红色精神和龙江历史文化的了解需求。</li>
+            </ul>
+        </div>
+
+        <div class="intro-card" id="feedback-section">
+            <h3><i class="fas fa-comments"></i> 建议反馈</h3>
+            <form id="feedback-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px;">姓名/组织</label>
+                        <input type="text" name="name" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;" required>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px;">反馈类型</label>
+                        <select name="type" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                            <option>功能建议</option>
+                            <option>资源报错</option>
+                            <option>内容补充</option>
+                            <option>项目合作</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px;">反馈详情</label>
+                    <textarea name="content" rows="5" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;" required></textarea>
+                </div>
+                <button type="submit" style="background: var(--primary-red); color: white; padding: 12px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: bold;">提交反馈</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>北疆红韵</h4>
+                <p>大学生创新创业项目申报作品</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
+            </div>
+            <div>
+                <h4>快速链接</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="spirit-anti-japanese.html">四大精神</a></li>
+                    <li><a href="spirit-longjiang.html">龙江精神</a></li>
+                    <li><a href="about.html">项目介绍</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>资源分类</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="articles.html">思政图文</a></li>
+                    <li><a href="videos.html">视频资源</a></li>
+                    <li><a href="resources.html">教学素材</a></li>
+                    <li><a href="literature.html">文献资料</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>版权与来源说明</h4>
+                <p style="font-size: 0.85rem;">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 备案号：黑ICP备XXXXXXXX号</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东北抗联精神 - 北疆红魂</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .spirit-header {
+            background: linear-gradient(rgba(200, 16, 46, 0.8), rgba(200, 16, 46, 0.8)), url('https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070&auto=format&fit=crop') center/cover;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .content-section h2 {
+            color: var(--primary-red);
+            border-left: 5px solid var(--primary-red);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .history-timeline {
+            border-left: 2px solid var(--secondary-gold);
+            padding-left: 2rem;
+            margin-left: 1rem;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary-gold);
+            border-radius: 50%;
+        }
+        .hero-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .hero-item {
+            text-align: center;
+        }
+        .hero-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-red);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">首页</a></li>
+                <li class="nav-item">
+                    <a href="spirit-anti-japanese.html" class="active">东北四大精神 <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="spirit-anti-japanese.html">抗联精神</a>
+                        <a href="spirit-beidahuang.html">北大荒精神</a>
+                        <a href="spirit-daqing.html">大庆精神</a>
+                        <a href="spirit-ironman.html">铁人精神</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="spirit-longjiang.html">龙江精神</a></li>
+                <li class="nav-item"><a href="articles.html">思政图文</a></li>
+                <li class="nav-item"><a href="videos.html">视频资源</a></li>
+                <li class="nav-item"><a href="resources.html">教学素材</a></li>
+                <li class="nav-item"><a href="literature.html">文献资料</a></li>
+                <li class="nav-item"><a href="classroom.html">科普园地</a></li>
+                <li class="nav-item"><a href="about.html">项目介绍</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="spirit-header">
+        <h1>东北抗联精神</h1>
+        <p style="margin-top: 1rem; font-size: 1.2rem;">“忠诚于党、勇赴国难、血战到底”</p>
+    </header>
+
+    <main class="container">
+        <!-- 精神内涵 -->
+        <section class="content-section">
+            <h2>精神内涵</h2>
+            <p>东北抗联精神是中国共产党领导的东北抗日联军在14年极其艰苦卓绝的抗日斗争中培育形成的伟大精神。它是中国共产党精神谱系的重要组成部分，其核心内涵包括：</p>
+            <ul style="margin-top: 1rem; padding-left: 2rem;">
+                <li><strong>坚定的理想信念：</strong> 在孤军奋战、环境恶劣的情况下，始终保持对共产主义的信仰。</li>
+                <li><strong>高尚的爱国主义：</strong> 面对民族危亡，义无反顾地投身抗日一线，誓死保卫家乡。</li>
+                <li><strong>顽强的斗争意志：</strong> 在极度饥寒、弹尽粮绝的绝境中，依然坚持战斗，血战到底。</li>
+            </ul>
+        </section>
+
+        <!-- 历史溯源 -->
+        <section class="content-section">
+            <h2>历史溯源</h2>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <h4>1931年：九一八事变</h4>
+                    <p>日本侵略者侵占东北，中国共产党率先发出武装抗日的号召，东北各地兴起抗日义勇军。</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>1936年：东北抗日联军正式组建</h4>
+                    <p>在中国共产党的领导下，东北抗日武装统一整编为东北抗日联军，下辖11个军。</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>1940-1945年：最艰难的时期</h4>
+                    <p>抗联进入小分队活动和野营整训阶段，继续在白山黑水间牵制日军，直至抗战胜利。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 代表人物 -->
+        <section class="content-section">
+            <h2>代表人物</h2>
+            <div class="hero-list">
+                <div class="hero-item">
+                    <img src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?q=80&w=1887&auto=format&fit=crop" alt="杨靖宇">
+                    <h4>杨靖宇</h4>
+                    <p style="font-size: 0.9rem; color: #666;">东北抗日联军第一路军总司令，战斗到最后一刻，腹中只有草根、棉絮。</p>
+                </div>
+                <div class="hero-item">
+                    <img src="https://images.unsplash.com/photo-1590086783191-a0699c82f94b?q=80&w=1887&auto=format&fit=crop" alt="赵尚志">
+                    <h4>赵尚志</h4>
+                    <p style="font-size: 0.9rem; color: #666;">东北抗日联军创建人和领导人，“小小满洲国，大大赵尚志”。</p>
+                </div>
+                <div class="hero-item">
+                    <img src="https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=1887&auto=format&fit=crop" alt="赵一曼">
+                    <h4>赵一曼</h4>
+                    <p style="font-size: 0.9rem; color: #666;">抗联巾帼英雄，写下感人至深的《示儿书》，英勇就义。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学习资料 -->
+        <section class="content-section">
+            <h2>学习资料</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <div class="card" style="padding: 1rem; border: 1px solid #eee;">
+                    <i class="fas fa-file-alt" style="color: var(--primary-red); margin-bottom: 0.5rem;"></i>
+                    <h5>《东北抗联史》读后感</h5>
+                    <p style="font-size: 0.8rem; color: #888;">推荐学习参考文章</p>
+                    <a href="articles.html" style="color: var(--primary-red); font-size: 0.8rem;">查看全文</a>
+                </div>
+                <div class="card" style="padding: 1rem; border: 1px solid #eee;">
+                    <i class="fas fa-video" style="color: var(--primary-red); margin-bottom: 0.5rem;"></i>
+                    <h5>抗联精神微课：信仰的力量</h5>
+                    <p style="font-size: 0.8rem; color: #888;">5分钟精品思政视频</p>
+                    <a href="videos.html" style="color: var(--primary-red); font-size: 0.8rem;">立即播放</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>北疆红韵</h4>
+                <p>大学生创新创业项目申报作品</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
+            </div>
+            <div>
+                <h4>快速链接</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="spirit-anti-japanese.html">四大精神</a></li>
+                    <li><a href="spirit-longjiang.html">龙江精神</a></li>
+                    <li><a href="about.html">项目介绍</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>资源分类</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="articles.html">思政图文</a></li>
+                    <li><a href="videos.html">视频资源</a></li>
+                    <li><a href="resources.html">教学素材</a></li>
+                    <li><a href="literature.html">文献资料</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>版权与来源说明</h4>
+                <p style="font-size: 0.85rem;">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 备案号：黑ICP备XXXXXXXX号</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
