@@ -3,30 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>教学素材中心 - 北疆红韵</title>
+    <title>教学素材 - 北疆红韵</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .resource-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; margin-top: 1rem; box-shadow: var(--shadow); }
-        .resource-table th, .resource-table td { padding: 1.5rem; text-align: left; border-bottom: 1px solid #eee; }
-        .resource-table th { background: #f8f9fa; font-weight: bold; color: var(--primary-red); }
-        .download-btn { color: var(--primary-red); cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: bold; }
-        .download-btn:hover { color: var(--primary-dark); }
-        .type-badge { padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; }
-        .badge-ppt { background: #FFF5F0; color: #E45B00; border: 1px solid #FFD8C2; }
-        .badge-doc { background: #F0F7FF; color: #0078D4; border: 1px solid #C2E0FF; }
-        .badge-quiz { background: #F0FFF4; color: #228B22; border: 1px solid #C2FFD8; }
-    </style>
 </head>
 <body>
+    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
             <ul class="nav-links">
                 <li class="nav-item"><a href="index.html">首页</a></li>
                 <li class="nav-item">
-                    <a href="spirit-anti-japanese.html">东北四大精神 <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
-                    <div class="dropdown-menu">
+                    <a href="spirit-anti-japanese.html">东北四大精神 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
                         <a href="spirit-anti-japanese.html">抗联精神</a>
                         <a href="spirit-beidahuang.html">北大荒精神</a>
                         <a href="spirit-daqing.html">大庆精神</a>
@@ -34,102 +24,201 @@
                     </div>
                 </li>
                 <li class="nav-item"><a href="spirit-longjiang.html">龙江精神</a></li>
-                <li class="nav-item"><a href="articles.html">思政图文</a></li>
-                <li class="nav-item"><a href="videos.html">视频资源</a></li>
-                <li class="nav-item"><a href="resources.html" class="active">教学素材</a></li>
-                <li class="nav-item"><a href="literature.html">文献资料</a></li>
-                <li class="nav-item"><a href="classroom.html">科普园地</a></li>
+                <li class="nav-item">
+                    <a href="articles.html">思政图文 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="articles.html?cat=theory">理论文章</a>
+                        <a href="articles.html?cat=post">学习推文</a>
+                        <a href="articles.html?cat=story">红色故事</a>
+                        <a href="articles.html?cat=expert">权威解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="videos.html">视频资源 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="videos.html?cat=micro">思政微课</a>
+                        <a href="videos.html?cat=doc">红色纪录片</a>
+                        <a href="videos.html?cat=lecture">精神宣讲</a>
+                        <a href="videos.html?cat=history">历史影像</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="active">教学素材 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="resources.html?cat=plan">思政教案</a>
+                        <a href="resources.html?cat=ppt">PPT课件</a>
+                        <a href="resources.html?cat=quiz">学习习题</a>
+                        <a href="resources.html?cat=outline">备课提纲</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="literature.html">文献资料 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="literature.html?cat=doc">历史文献</a>
+                        <a href="literature.html?cat=speech">重要论述</a>
+                        <a href="literature.html?cat=research">研究摘编</a>
+                        <a href="literature.html?cat=archive">档案资料</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="classroom.html">科普园地 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="classroom.html?cat=pop">精神小科普</a>
+                        <a href="classroom.html?cat=story">人物小故事</a>
+                        <a href="classroom.html?cat=qa">知识问答</a>
+                        <a href="classroom.html?cat=term">红色词条</a>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="about.html">项目介绍</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
-        <div class="section-header">
-            <h2>教学素材中心</h2>
-            <p>为高校思政课教师及学生提供专业、严谨、成体系的红色教学资源</p>
+    <!-- 顶部 Banner -->
+    <header class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022');">
+        <div class="banner-content">
+            <h1>思政教学素材库</h1>
+            <p>辅助教学、丰富课堂、传承基因</p>
         </div>
+    </header>
 
-        <div class="filter-tabs">
-            <button class="filter-btn active" data-filter="all">全部素材</button>
-            <button class="filter-btn" data-filter="plan">思政教案</button>
-            <button class="filter-btn" data-filter="ppt">PPT课件</button>
-            <button class="filter-btn" data-filter="quiz">学习习题</button>
-            <button class="filter-btn" data-filter="outline">备课提纲</button>
+    <!-- 资源列表 -->
+    <section class="unified-section">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>精品教学资源</h2>
+                <div class="divider"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 10+ 个教学素材 -->
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-powerpoint" style="font-size: 2.5rem; color: #d04423;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">东北抗联精神专题课件</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：PPTX | 大小：12.5MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-word" style="font-size: 2.5rem; color: #2b579a;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">北大荒精神教学大纲</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：DOCX | 大小：1.2MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 2.5rem; color: #e02a2a;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">大庆石油会战历史地图集</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：PDF | 大小：25.8MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-powerpoint" style="font-size: 2.5rem; color: #d04423;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">铁人王进喜英雄事迹PPT</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：PPTX | 大小：15.3MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-video" style="font-size: 2.5rem; color: #ff8c00;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">龙江红色地标高清图集</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：ZIP | 大小：120MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-word" style="font-size: 2.5rem; color: #2b579a;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">大学生红色文化调研问卷</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：DOCX | 大小：0.5MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 2.5rem; color: #e02a2a;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">黑龙江省革命旧址名录</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：PDF | 大小：8.4MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-powerpoint" style="font-size: 2.5rem; color: #d04423;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">新时代弘扬四大精神宣讲稿</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：PPTX | 大小：18.2MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-image" style="font-size: 2.5rem; color: #4caf50;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">抗联十四年战役分布图</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：JPG | 大小：5.6MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 20px; display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-file-video" style="font-size: 2.5rem; color: #ff8c00;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">北大荒今昔对比航拍素材</h4>
+                        <p style="font-size: 0.8rem; color: #666;">格式：MP4 | 大小：85MB</p>
+                        <a href="#" class="resource-download" style="color: var(--primary-red); font-size: 0.85rem; margin-top: 5px; display: inline-block;">[立即下载]</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <table class="resource-table">
-            <thead>
-                <tr>
-                    <th>素材名称</th>
-                    <th>分类</th>
-                    <th>更新日期</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="filter-item-card" data-category="ppt">
-                    <td><i class="far fa-file-powerpoint" style="color: #E45B00;"></i> 东北四大精神深度解析专题课件</td>
-                    <td><span class="type-badge badge-ppt">PPT课件</span></td>
-                    <td>2024-04-12</td>
-                    <td><a href="#" class="resource-download download-btn" data-file="东北四大精神专题.pptx"><i class="fas fa-download"></i> 下载</a></td>
-                </tr>
-                <tr class="filter-item-card" data-category="plan">
-                    <td><i class="far fa-file-word" style="color: #0078D4;"></i> 《龙江红色地标巡礼》教学设计方案</td>
-                    <td><span class="type-badge badge-doc">思政教案</span></td>
-                    <td>2024-04-08</td>
-                    <td><a href="#" class="resource-download download-btn" data-file="教学设计方案.docx"><i class="fas fa-eye"></i> 预览</a></td>
-                </tr>
-                <tr class="filter-item-card" data-category="quiz">
-                    <td><i class="far fa-file-alt" style="color: #228B22;"></i> 2024版大学生红色文化知识竞赛题库</td>
-                    <td><span class="type-badge badge-quiz">学习习题</span></td>
-                    <td>2024-03-30</td>
-                    <td><a href="#" class="resource-download download-btn" data-file="红色知识题库.pdf"><i class="fas fa-download"></i> 下载</a></td>
-                </tr>
-                <tr class="filter-item-card" data-category="outline">
-                    <td><i class="far fa-file-pdf" style="color: #c0392b;"></i> 铁人精神专题讲座备课参考提纲</td>
-                    <td><span class="type-badge badge-doc">备课提纲</span></td>
-                    <td>2024-03-25</td>
-                    <td><a href="#" class="resource-download download-btn" data-file="备课提纲.pdf"><i class="fas fa-download"></i> 下载</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-grid">
-            <div>
-                <h4>北疆红韵</h4>
-                <p>大学生创新创业项目申报作品</p>
-                <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
+    <!-- 底部版权 -->
+    <footer class="footer" style="background: #1a1a1a; color: #ddd; padding: 60px 0 20px;">
+        <div class="section-container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px;">
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">北疆红韵</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">大学生创新创业项目申报作品。致力于东北红色精神的数字化集成与思政教育资源整合，打造一站式科普学习平台。</p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">快速链接</h4>
+                    <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem;">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="spirit-anti-japanese.html">四大精神</a></li>
+                        <li><a href="spirit-longjiang.html">龙江精神</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">资源中心</h4>
+                    <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem;">
+                        <li><a href="articles.html">思政图文</a></li>
+                        <li><a href="videos.html">视频资源</a></li>
+                        <li><a href="resources.html">教学素材</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">版权说明</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.8;">素材来源：学习强国、人民网、央视网、黑龙江党史网。内容仅用于公益性科普与思政学习展示，无商业用途。</p>
+                </div>
             </div>
-            <div>
-                <h4>快速链接</h4>
-                <ul style="list-style: none; line-height: 2;">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="spirit-anti-japanese.html">四大精神</a></li>
-                    <li><a href="spirit-longjiang.html">龙江精神</a></li>
-                    <li><a href="about.html">项目介绍</a></li>
-                </ul>
+            <div style="text-align: center; border-top: 1px solid #333; margin-top: 40px; padding-top: 20px; font-size: 0.8rem;">
+                <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 申报单位：[您的大学名称]</p>
             </div>
-            <div>
-                <h4>资源分类</h4>
-                <ul style="list-style: none; line-height: 2;">
-                    <li><a href="articles.html">思政图文</a></li>
-                    <li><a href="videos.html">视频资源</a></li>
-                    <li><a href="resources.html">教学素材</a></li>
-                    <li><a href="literature.html">文献资料</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>版权与来源说明</h4>
-                <p style="font-size: 0.85rem;">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 备案号：黑ICP备XXXXXXXX号</p>
         </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

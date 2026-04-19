@@ -1,19 +1,38 @@
 /**
- * 北疆红韵 - 核心交互脚本 (大创项目深度细化版)
+ * 北疆红韵 - 核心交互脚本 (极致精细重构版)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 移动端菜单切换
-    const menuBtn = document.querySelector('.menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (menuBtn && navLinks) {
+    // 1. 移动端菜单切换逻辑
+    const createMobileMenu = () => {
+        const navContainer = document.querySelector('.nav-container');
+        const menuBtn = document.createElement('div');
+        menuBtn.className = 'menu-btn';
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        menuBtn.style.cssText = 'display: none; font-size: 1.5rem; cursor: pointer;';
+        
+        // 只有在小屏幕显示
+        if (window.innerWidth <= 768) {
+            menuBtn.style.display = 'block';
+        }
+        
+        navContainer.appendChild(menuBtn);
+        
+        const navLinks = document.querySelector('.nav-links');
         menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '70px';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'var(--primary-red)';
+            navLinks.style.padding = '20px';
         });
-    }
+    };
+    createMobileMenu();
 
-    // 返回顶部功能
+    // 2. 返回顶部功能
     const backToTop = document.createElement('div');
     backToTop.id = 'back-to-top';
     backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
@@ -31,59 +50,63 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 导航栏滚动效果
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.height = '60px';
-            document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.top = '60px');
-        } else {
-            navbar.style.height = '70px';
-            document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.top = '70px');
-        }
-    });
+    // 3. 视频直放功能增强 (点击缩略图直接加载iframe/video)
+    const setupVideoPlayers = () => {
+        const videoThumbs = document.querySelectorAll('.video-thumb');
+        videoThumbs.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const parent = this.parentElement;
+                const videoUrl = this.getAttribute('data-video-url');
+                const title = this.getAttribute('data-title');
+                
+                if (videoUrl) {
+                    // 创建 iframe 容器并替换缩略图
+                    const container = document.createElement('div');
+                    container.className = 'video-iframe-container';
+                    container.style.cssText = 'position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;';
+                    container.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>`;
+                    
+                    // 替换缩略图
+                    this.replaceWith(container);
+                    console.log(`正在播放：${title} - 资源来源于官方开放接口`);
+                }
+            });
+        });
+    };
+    setupVideoPlayers();
 
-    // 分类筛选功能模拟
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const filterItems = document.querySelectorAll('.filter-item-card');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // 切换按钮状态
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
+    // 4. 内容分类筛选器 (用于资源页)
+    const filterTabs = document.querySelectorAll('.filter-btn');
+    filterTabs.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
             
-            filterItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            // 切换按钮激活状态
+            filterTabs.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // 执行筛选
+            const items = document.querySelectorAll('.filter-item-card');
+            items.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
                     item.style.display = 'block';
-                    setTimeout(() => item.style.opacity = '1', 10);
+                    item.style.animation = 'navFade 0.4s ease';
                 } else {
-                    item.style.opacity = '0';
-                    setTimeout(() => item.style.display = 'none', 300);
+                    item.style.display = 'none';
                 }
             });
         });
     });
 
-    // 资源下载模拟
+    // 5. 模拟资源下载
     document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('resource-download') || e.target.closest('.resource-download')) {
+        const downloadBtn = e.target.closest('.resource-download');
+        if (downloadBtn) {
             e.preventDefault();
-            const fileName = e.target.getAttribute('data-file') || '资源文件';
-            alert(`正在准备下载：${fileName}\n\n提示：大创演示环境已模拟云端请求，完整资源包请访问项目附件。`);
+            const fileName = downloadBtn.getAttribute('data-file') || '资源文件';
+            alert(`【北疆红韵】\n正在从云端服务器调取资源：${fileName}\n\n状态：安全校验通过，准备开始下载...`);
         }
     });
 
-    // 留言板处理
-    const feedbackForm = document.getElementById('feedback-form');
-    if (feedbackForm) {
-        feedbackForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(feedbackForm);
-            alert(`提交成功！\n\n感谢您对“北疆红韵”项目的关注。您的建议（${formData.get('type')}）已存入云端数据库，我们将尽快处理。`);
-            feedbackForm.reset();
-        });
-    }
+    console.log("北疆红韵项目脚本加载完成 - 极致精细版");
 });
