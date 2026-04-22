@@ -25,14 +25,30 @@ body {
     background-color: var(--bg-beige);
     color: var(--text-dark);
     line-height: 1.8;
-    background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
-    background-size: 30px 30px; /* 微弱暗纹背景 */
+    background-image: 
+        url('https://www.transparenttextures.com/patterns/pinstriped-suit.png'), /* 极淡的竖纹 */
+        radial-gradient(var(--border) 0.5px, transparent 0.5px);
+    background-size: 100px 100px, 30px 30px;
 }
 
 /* 统一布局模块样式 */
 .unified-section {
     padding: 80px 0;
     position: relative;
+}
+
+/* 庄重的思政背景暗纹 - 仅在部分区域显示 */
+.unified-section::after {
+    content: '\f24e'; /* Flag icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 8rem;
+    color: rgba(200, 16, 46, 0.03);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .unified-section:nth-child(even) {
@@ -67,27 +83,28 @@ body {
 }
 
 .section-title h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--primary-red);
     margin-bottom: 15px;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     font-weight: 900;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     display: inline-block;
     position: relative;
+    padding: 0 40px;
 }
 
 .section-title h2::before, .section-title h2::after {
     content: '';
     position: absolute;
     top: 50%;
-    width: 50px;
-    height: 2px;
+    width: 60px;
+    height: 3px;
     background: var(--gold-gradient);
 }
 
-.section-title h2::before { left: -70px; }
-.section-title h2::after { right: -70px; }
+.section-title h2::before { left: -60px; }
+.section-title h2::after { right: -60px; }
 
 .section-title .divider {
     width: 80px;
@@ -108,6 +125,15 @@ body {
     z-index: 2000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     border-bottom: 3px solid var(--secondary-gold);
+}
+
+/* 页面顶部飘带装饰 */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 5px;
+    background: var(--gold-gradient);
+    z-index: 2001;
 }
 
 .nav-container {
@@ -257,6 +283,7 @@ body {
     border: 2px solid var(--secondary-gold);
     transition: 0.3s;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .hero-btn:hover {
@@ -264,6 +291,7 @@ body {
     box-shadow: 0 10px 25px rgba(200, 16, 46, 0.4);
     background: var(--gold-gradient);
     color: var(--primary-dark);
+    border-color: var(--primary-red);
 }
 
 /* 通用卡片设计 */
@@ -275,12 +303,14 @@ body {
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 1px solid #F0F0F0;
     position: relative;
+    border-bottom: 4px solid transparent;
 }
 
 .card:hover {
     transform: translateY(-12px);
     box-shadow: 0 20px 40px rgba(200, 16, 46, 0.12);
     border-color: var(--light-gold);
+    border-bottom: 4px solid var(--primary-red);
 }
 
 /* 人物卡片专场 */
@@ -416,19 +446,26 @@ body {
 
 /* 按钮与通用元素装饰 */
 .btn-gold {
-    background: var(--gold-gradient);
-    color: var(--primary-dark);
+    background: var(--red-gradient);
+    color: white;
     padding: 10px 25px;
     border-radius: 4px;
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    border: none;
+    border: 2px solid var(--secondary-gold);
     cursor: pointer;
     transition: 0.3s;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-.btn-gold:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
+.btn-gold:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); 
+    background: var(--gold-gradient);
+    color: var(--primary-dark);
+    border-color: var(--primary-red);
+}
 
 /* 响应式调整 */
 @media (max-width: 768px) {
