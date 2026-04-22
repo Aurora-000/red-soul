@@ -126,57 +126,74 @@
         </div>
     </nav>
 
-    <!-- 轮播图/英雄 Banner -->
+    <!-- 1. 全屏红色轮播 Banner -->
     <header class="hero-banner">
-        <h1>赓续红色血脉 筑牢北疆红魂</h1>
-        <p>龙江精神·东北四大精神·数字化思政资源一站式集成平台</p>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070');">
+            <div class="hero-content">
+                <h1>北疆红韵</h1>
+                <p>东北红色精神思政资源整合平台</p>
+                <a href="#spirit-intro" class="hero-btn">开启学习之旅</a>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1541829070764-84a7d30dee6b?q=80&w=2070');">
+            <div class="hero-content">
+                <h1>薪火相传</h1>
+                <p>让抗联精神、大庆精神、铁人精神照亮未来</p>
+                <a href="spirit-anti-japanese.html" class="hero-btn">深入了解</a>
+            </div>
+        </div>
     </header>
 
-    <div class="quick-stats">
-        <div class="stat-item">
-            <h3>500+</h3>
-            <p>思政资源总量</p>
+    <!-- 2. 核心精神概览 (卡片式设计) -->
+    <section id="spirit-intro" class="unified-section">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>四大核心精神</h2>
+                <div class="divider"></div>
+                <p style="margin-top: 20px; color: var(--text-mid);">根植黑土地，铸就中国魂</p>
+            </div>
+            
+            <div class="people-grid">
+                <div class="card people-card">
+                    <div class="people-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070" class="people-img" alt="东北抗联精神">
+                    </div>
+                    <div class="people-info">
+                        <h3>东北抗联精神</h3>
+                        <span class="role">勇往直前 · 不屈不挠</span>
+                        <p>在白山黑水间抗击日寇十四载，展现了中国共产党人视死如归的英雄气概和坚忍不拔的战斗意志。</p>
+                        <a href="spirit-anti-japanese.html" class="btn-gold" style="margin-top: 20px;">进入专题</a>
+                    </div>
+                </div>
+
+                <div class="card people-card">
+                    <div class="people-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070" class="people-img" alt="北大荒精神">
+                    </div>
+                    <div class="people-info">
+                        <h3>北大荒精神</h3>
+                        <span class="role">艰苦奋斗 · 勇于开拓</span>
+                        <p>十万官兵挺进荒原，靠着双手将“北大荒”建设成“北大仓”，铸就了农业现代化的壮丽史诗。</p>
+                        <a href="spirit-beidahuang.html" class="btn-gold" style="margin-top: 20px;">进入专题</a>
+                    </div>
+                </div>
+
+                <div class="card people-card">
+                    <div class="people-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dee6b?q=80&w=2070" class="people-img" alt="大庆精神">
+                    </div>
+                    <div class="people-info">
+                        <h3>大庆精神</h3>
+                        <span class="role">爱国奉献 · 严谨求实</span>
+                        <p>大庆石油大会战，甩掉了中国贫油的帽子。王进喜等第一代石油人用生命践行了为国分忧的誓言。</p>
+                        <a href="spirit-daqing.html" class="btn-gold" style="margin-top: 20px;">进入专题</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="stat-item">
-            <h3>120+</h3>
-            <p>权威视频课件</p>
-        </div>
-        <div class="stat-item">
-            <h3>50+</h3>
-            <p>历史文献档案</p>
-        </div>
-        <div class="stat-item">
-            <h3>100%</h3>
-            <p>官方权威来源</p>
-        </div>
-    </div>
+    </section>
 
     <main class="container">
-        <!-- 核心专区：四大精神入口 -->
-        <section>
-            <div class="section-header">
-                <h2>东北四大精神专题</h2>
-                <p>深度探寻龙江红色根脉，感悟跨越时空的榜样力量</p>
-            </div>
-            <div class="spirit-grid">
-                <a href="spirit-anti-japanese.html" class="spirit-card" style="background-image: url('https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070');">
-                    <h3>东北抗联精神</h3>
-                    <p>忠诚于党、勇赴国难、血战到底</p>
-                </a>
-                <a href="spirit-beidahuang.html" class="spirit-card" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070');">
-                    <h3>北大荒精神</h3>
-                    <p>艰苦奋斗、勇于开拓、顾全大局、无私奉献</p>
-                </a>
-                <a href="spirit-daqing.html" class="spirit-card" style="background-image: url('https://images.unsplash.com/photo-1516937622178-745583720b1c?q=80&w=2070');">
-                    <h3>大庆精神</h3>
-                    <p>爱国、创业、求实、奉献</p>
-                </a>
-                <a href="spirit-ironman.html" class="spirit-card" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070');">
-                    <h3>铁人精神</h3>
-                    <p>“宁肯少活二十年，拼命也要拿下大油田”</p>
-                </a>
-            </div>
-        </section>
 
         <!-- 龙江精神特别呈现 -->
         <section style="margin-top: 60px; background: var(--white); padding: 50px; border-radius: 8px; box-shadow: var(--shadow);">
