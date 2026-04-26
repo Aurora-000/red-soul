@@ -5,6 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const DEFAULT_PROJECT_TEXT = "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目";
+    const IMAGE_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=";
     const pathname = window.location.pathname.split("/").pop() || "index.html";
     const query = new URLSearchParams(window.location.search);
 
@@ -25,21 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
             subtitle: "东北红色精神思政资源整合平台",
             ctaLabel: "开启学习之旅",
             ctaHref: "#spirit-intro",
-            image: "https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070"
+            image: IMAGE_PLACEHOLDER
         },
         {
             title: "北大荒精神",
             subtitle: "艰苦奋斗、勇于开拓的创业史诗",
             ctaLabel: "深入了解",
             ctaHref: "spirit-beidahuang.html",
-            image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070"
+            image: IMAGE_PLACEHOLDER
         },
         {
             title: "大庆/铁人精神",
             subtitle: "宁肯少活二十年，拼命拿下大油田",
             ctaLabel: "进入专题",
             ctaHref: "spirit-daqing.html",
-            image: "https://images.unsplash.com/photo-1541829070764-84a7d30dee6b?q=80&w=2070"
+            image: IMAGE_PLACEHOLDER
         }
     ];
     const ARTICLE_READ_RANGE = {
@@ -762,6 +763,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                         <div class="people-info">
                                             <h3>${person.name}</h3>
                                             <span class="role">${person.role}</span>
+                                            ${person.fact ? `<p class="people-fact">${person.fact}</p>` : ""}
                                             <p>${person.description}</p>
                                         </div>
                                     </article>
@@ -1156,6 +1158,17 @@ document.addEventListener("DOMContentLoaded", () => {
             spiritSubtitle.textContent = homePageConfig.spiritIntro.subtitle;
         }
 
+        const spiritCardImages = [
+            homePageConfig.heroSlides?.[0]?.image || portalData?.spirits?.antiJapanese?.gallery?.[0]?.image,
+            homePageConfig.heroSlides?.[1]?.image || portalData?.spirits?.beidahuang?.gallery?.[0]?.image,
+            homePageConfig.heroSlides?.[2]?.image || portalData?.spirits?.daqing?.gallery?.[0]?.image
+        ];
+        document.querySelectorAll("#spirit-intro .people-card .people-img").forEach((imageNode, index) => {
+            if (spiritCardImages[index]) {
+                imageNode.setAttribute("src", spiritCardImages[index]);
+            }
+        });
+
         const mainSections = document.querySelectorAll("main.container > section");
         const longjiangSection = mainSections[0];
         if (longjiangSection && homePageConfig.longjiangFeature) {
@@ -1257,8 +1270,28 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const syncDataBannerImages = () => {
+        const resolveBannerImage = () => {
+            if (!portalData) return "";
+
+            const bannerMap = {
+                "about.html": portalData.aboutPage?.banner?.image,
+                "spirit-anti-japanese.html": portalData.spirits?.antiJapanese?.gallery?.[0]?.image || portalData.homePage?.heroSlides?.[0]?.image,
+                "spirit-beidahuang.html": portalData.spirits?.beidahuang?.gallery?.[0]?.image || portalData.homePage?.heroSlides?.[1]?.image,
+                "spirit-daqing.html": portalData.spirits?.daqing?.gallery?.[0]?.image || portalData.homePage?.heroSlides?.[2]?.image,
+                "spirit-ironman.html": portalData.spirits?.ironman?.gallery?.[0]?.image || portalData.spirits?.ironman?.people?.[0]?.image,
+                "spirit-longjiang.html": portalData.spirits?.longjiang?.gallery?.[0]?.image || portalData.homePage?.longjiangFeature?.image,
+                "articles.html": portalData.listings?.articles?.items?.[0]?.image,
+                "literature.html": portalData.channels?.literature?.items?.[0]?.cover,
+                "classroom.html": portalData.listings?.articles?.items?.[5]?.image || portalData.homePage?.heroSlides?.[0]?.image,
+                "resources.html": portalData.aboutPage?.banner?.image || portalData.homePage?.heroSlides?.[0]?.image,
+                "videos.html": portalData.videos?.categories?.[0]?.items?.[0]?.image || portalData.homePage?.heroSlides?.[0]?.image
+            };
+
+            return bannerMap[pathname] || "";
+        };
+
         document.querySelectorAll("[data-banner-image]").forEach((section) => {
-            const bannerImage = section.getAttribute("data-banner-image");
+            const bannerImage = section.getAttribute("data-banner-image") || resolveBannerImage();
             if (bannerImage) {
                 section.style.backgroundImage = `url('${bannerImage}')`;
             }

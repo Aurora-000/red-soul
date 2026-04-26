@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+            <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#651019" />
+                    <stop offset="100%" stop-color="#2a0307" />
+                </linearGradient>
+                <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#f7d774" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#fff2c5" stop-opacity="0.35" />
+                </linearGradient>
+            </defs>
+            <rect width="900" height="1200" fill="url(#bg)" />
+            <circle cx="780" cy="118" r="220" fill="#f7d774" opacity="0.10" />
+            <circle cx="740" cy="118" r="160" fill="#f7d774" opacity="0.10" />
+            <path d="M0 1080 C 198 990, 450 1170, 900 1055 L 900 1200 L 0 1200 Z" fill="#8b1821" opacity="0.82" />
+            <rect x="70" y="74" width="378" height="42" rx="21" fill="url(#shine)" />
+            <text x="92" y="102" font-size="22" fill="#5b0811" font-weight="700">龙江人物</text>
+            <rect x="74" y="146" width="432" height="6" rx="3" fill="#f7d774" opacity="0.92" />
+            <text x="82" y="240" font-size="54" fill="#fffaf0" font-weight="700">马恒昌</text>
+            <text x="86" y="312" font-size="34" fill="#ffe8d2">全国著名劳动模范</text>
+            
+        <text x="86" y="420" font-size="30" fill="#fff6e8" opacity="0.92">劳动竞赛先进代表</text>
+        <text x="86" y="476" font-size="30" fill="#fff6e8" opacity="0.92">体现务实担当</text>
+            <rect x="82" y="1096" width="558" height="48" rx="24" fill="rgba(255,255,255,0.08)" />
+            <text x="108" y="1128" font-size="22" fill="#fff6e8">人物专题标准名牌图</text>
+        </svg>

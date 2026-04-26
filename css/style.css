@@ -708,6 +708,17 @@ img {
     border-bottom: 1px dashed rgba(212, 175, 55, 0.7);
 }
 
+.people-fact {
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(200, 16, 46, 0.08);
+    color: var(--primary-red);
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
 .people-info p,
 .card p,
 .intro-card p,

@@ -18,6 +18,25 @@
 
 ## 4. 云端部署指南
 
+## 4.1 静态海报资源维护
+- 当前人物专题图、专题视频封面、历史场景封面已统一收口到 `assets/posters/` 目录，适合直接覆盖上传到云端。
+- 数据入口统一位于 `js/portal-data.js`，浏览器默认读取 `assets/posters/*.svg` 静态路径。
+- `js/portal-data.js` 顶层新增 `assetSourceRegistry`，用于登记核心人物/地标的官方素材来源、推荐图型与替换备注。
+- 已确认来源的卡片条目新增 `sourceHintKey`，后续替换正式原图时可按键值一一对应，避免人物串图、场景错配。
+- 如需在调整文案后重新生成全部专题图，可在项目根目录执行：
+
+```bash
+node ./tools/generate-posters.mjs
+```
+
+- 如需替换为最终官方实拍原图，优先直接替换 `portal-data.js` 对应条目的 `image` 路径，或以同名静态文件方式覆盖 `assets/posters/` 中对应资源。
+- 推荐替换流程：
+  1. 先在 `assetSourceRegistry` 中找到对应 `sourceHintKey` 的来源页。
+  2. 从权威站点下载或申请使用原图，统一裁切后放入 `assets/posters/` 或新建 `assets/official/`。
+  3. 将对应条目的 `image` 改为正式图片路径，保留 `sourceHintKey` 便于后续追溯。
+  4. 替换后检查 PC 与移动端卡片裁切效果，确认未破坏现有政务化布局。
+- 当前静态海报仅作为“准确卡位版”过渡素材，目的在于先彻底消除人物串图、封面乱用和场景错配问题。
+
 为了实现任意浏览器直接访问，建议将本项目部署至以下平台：
 
 ### 方案 A：Gitee Pages (国内首选，访问速度快)
