@@ -57,6 +57,16 @@ node ./tools/generate-posters.mjs
 2. 导入本项目仓库。
 3. 点击 **Deploy**，系统会自动生成一个随机二级域名链接。
 
+### 方案 D：Cloudflare Pages (推荐绑定 GitHub 自动发布)
+1. 进入 Cloudflare 控制台的 **Workers & Pages**，选择 **Create application -> Pages -> Import an existing Git repository**。
+2. 授权 Cloudflare 访问 GitHub，并选择仓库 `Aurora-000/red-soul`。
+3. 部署参数建议填写：
+   - **Production branch**：`main`
+   - **Build command**：`exit 0`
+   - **Build output directory**：`.`
+4. 首次部署成功后，Cloudflare 会生成一个 `*.pages.dev` 域名；后续只要继续向 GitHub `main` 分支推送，Pages 会自动重新构建并发布。
+5. 若访问首页出现 404，请确认仓库根目录保留 `index.html`，不要将首页移出项目根目录。
+
 ## 5. 合规性说明
 - **素材来源**：本站所有文字、图片、视频资源均引用自学习强国、人民网、新华网、黑龙江党史网等官方权威平台。
 - **版权用途**：本项目仅用于大创项目展示、公益性科普与思政教育，无商业盈利用途，符合学术合规性要求。
