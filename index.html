@@ -6,57 +6,6 @@
     <title>北疆红韵 —— 东北红色精神思政资源整合平台</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* 首页特有样式 */
-        .hero-banner {
-            height: 550px;
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1518111713580-07718e268a71?q=80&w=2070&auto=format&fit=crop') center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 1rem;
-        }
-
-        .hero-banner h1 {
-            font-size: 3.8rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            font-weight: 900;
-            letter-spacing: 5px;
-        }
-
-        .hero-banner p {
-            font-size: 1.4rem;
-            max-width: 900px;
-            background: rgba(200, 16, 46, 0.7);
-            padding: 10px 30px;
-            border-radius: 4px;
-        }
-
-        .quick-stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .stat-item {
-            background: var(--white);
-            padding: 25px 40px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            border-top: 5px solid var(--secondary-gold);
-        }
-
-        .stat-item h3 { font-size: 2rem; color: var(--primary-red); }
-        .stat-item p { color: var(--text-mid); font-size: 0.9rem; }
-    </style>
 </head>
 <body>
 
@@ -128,21 +77,21 @@
 
     <!-- 1. 全屏红色轮播 Banner -->
     <header class="hero-banner">
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070');">
+        <div class="hero-slide">
             <div class="hero-content">
                 <h1>北疆红韵</h1>
                 <p>东北红色精神思政资源整合平台</p>
                 <a href="#spirit-intro" class="hero-btn">开启学习之旅</a>
             </div>
         </div>
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070');">
+        <div class="hero-slide">
             <div class="hero-content">
                 <h1>北大荒精神</h1>
                 <p>艰苦奋斗、勇于开拓的创业史诗</p>
                 <a href="spirit-beidahuang.html" class="hero-btn">深入了解</a>
             </div>
         </div>
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1541829070764-84a7d30dee6b?q=80&w=2070');">
+        <div class="hero-slide">
             <div class="hero-content">
                 <h1>大庆/铁人精神</h1>
                 <p>宁肯少活二十年，拼命拿下大油田</p>
@@ -157,7 +106,7 @@
             <div class="section-title">
                 <h2>四大核心精神</h2>
                 <div class="divider"></div>
-                <p style="margin-top: 20px; color: var(--text-mid);">根植黑土地，铸就中国魂</p>
+                <p class="section-subtitle">根植黑土地，铸就中国魂</p>
             </div>
             
             <div class="people-grid">
@@ -169,7 +118,7 @@
                         <h3>东北抗联精神</h3>
                         <span class="role">勇往直前 · 不屈不挠</span>
                         <p>在白山黑水间抗击日寇十四载，展现了中国共产党人视死如归的英雄气概和坚忍不拔的战斗意志。</p>
-                        <a href="spirit-anti-japanese.html" class="btn-gold" style="margin-top: 20px;">进入专题</a>
+                        <a href="spirit-anti-japanese.html" class="btn-gold spirit-card-link">进入专题</a>
                     </div>
                 </div>
 
@@ -181,7 +130,7 @@
                         <h3>北大荒精神</h3>
                         <span class="role">艰苦奋斗 · 勇于开拓</span>
                         <p>十万官兵挺进荒原，靠着双手将“北大荒”建设成“北大仓”，铸就了农业现代化的壮丽史诗。</p>
-                        <a href="spirit-beidahuang.html" class="btn-gold" style="margin-top: 20px;">进入专题</a>
+                        <a href="spirit-beidahuang.html" class="btn-gold spirit-card-link">进入专题</a>
                     </div>
                 </div>
 
@@ -193,7 +142,7 @@
                         <h3>大庆精神</h3>
                         <span class="role">爱国奉献 · 严谨求实</span>
                         <p>大庆石油大会战，甩掉了中国贫油的帽子。王进喜等第一代石油人用生命践行了为国分忧的誓言。</p>
-                        <a href="spirit-daqing.html" class="btn-gold" style="margin-top: 20px;">进入专题</a>
+                        <a href="spirit-daqing.html" class="btn-gold spirit-card-link">进入专题</a>
                     </div>
                 </div>
             </div>
@@ -203,82 +152,86 @@
     <main class="container">
 
         <!-- 龙江精神特别呈现 -->
-        <section style="margin-top: 60px; background: var(--white); padding: 50px; border-radius: 8px; box-shadow: var(--shadow);">
-            <div style="display: flex; align-items: center; gap: 40px;">
-                <div style="flex: 1;">
-                    <h2 style="color: var(--primary-red); font-size: 2.2rem; margin-bottom: 20px;">龙江精神 · 薪火相传</h2>
-                    <p style="font-size: 1.1rem; color: #444; line-height: 1.8;">黑龙江是一片英雄的土地。从抗联将士的浴血奋战，到垦荒大军的战天斗地；从石油工人的无私奉献，到新时代龙江人的创新突破，这片土地孕育了伟大的龙江精神。</p>
-                    <a href="spirit-longjiang.html" class="filter-btn active" style="display: inline-block; margin-top: 25px; border-radius: 4px;">进入龙江精神专题 <i class="fas fa-arrow-right"></i></a>
+        <section class="home-feature-panel">
+            <div class="home-feature-panel__inner">
+                <div class="home-feature-panel__content">
+                    <h2 class="home-feature-panel__title">龙江精神 · 薪火相传</h2>
+                    <p class="home-feature-panel__desc">黑龙江是一片英雄的土地。从抗联将士的浴血奋战，到垦荒大军的战天斗地；从石油工人的无私奉献，到新时代龙江人的创新突破，这片土地孕育了伟大的龙江精神。</p>
+                    <a href="spirit-longjiang.html" class="filter-btn active home-feature-panel__action">进入龙江精神专题 <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div style="flex: 1;">
-                    <img src="https://images.unsplash.com/photo-1518111713580-07718e268a71?q=80&w=2070" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+                <div class="home-feature-panel__media">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dee6b?q=80&w=2070" class="home-feature-panel__image" alt="龙江精神专题">
                 </div>
             </div>
         </section>
 
         <!-- 内容速览 -->
-        <section>
+        <section class="home-preview-section">
             <h2 class="section-title">最新资源速览</h2>
             <div class="resource-grid">
                 <!-- 文章速览 -->
                 <div class="card info-card">
                     <h4><i class="fas fa-book"></i> 最新思政文章</h4>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 0.8rem; border-bottom: 1px dashed #eee; padding-bottom: 0.5rem;">
+                    <ul class="home-preview-list">
+                        <li class="home-preview-list__item">
                             <a href="articles.html">新时代如何弘扬东北抗联精神的理论思考</a>
-                            <span style="display: block; font-size: 0.8rem; color: #999;">2024-04-18</span>
+                            <span class="home-preview-list__meta">2024-04-18</span>
                         </li>
-                        <li style="margin-bottom: 0.8rem; border-bottom: 1px dashed #eee; padding-bottom: 0.5rem;">
+                        <li class="home-preview-list__item">
                             <a href="articles.html">北大荒精神对当代大学生的价值观塑造意义</a>
-                            <span style="display: block; font-size: 0.8rem; color: #999;">2024-04-15</span>
+                            <span class="home-preview-list__meta">2024-04-15</span>
                         </li>
                     </ul>
-                    <a href="articles.html" style="color: var(--primary-red); font-size: 0.9rem;">查看更多 <i class="fas fa-angle-right"></i></a>
+                    <a href="articles.html" class="home-preview-card__action">查看更多 <i class="fas fa-angle-right"></i></a>
                 </div>
 
                 <!-- 视频速览 -->
                 <div class="card info-card">
                     <h4><i class="fas fa-video"></i> 精选视频资源</h4>
-                    <div style="display: flex; gap: 10px; margin-top: 10px;">
-                        <div style="flex: 1;">
-                            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop" style="width: 100%; border-radius: 4px;">
-                            <p style="font-size: 0.8rem; margin-top: 5px;">《铁人王进喜》纪录片</p>
+                    <div class="home-preview-gallery">
+                        <div class="home-preview-gallery__item">
+                            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop" class="home-preview-gallery__image" alt="《铁人王进喜》纪录片">
+                            <p class="home-preview-gallery__title">《铁人王进喜》纪录片</p>
                         </div>
-                        <div style="flex: 1;">
-                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" style="width: 100%; border-radius: 4px;">
-                            <p style="font-size: 0.8rem; margin-top: 5px;">大庆精神宣讲课</p>
+                        <div class="home-preview-gallery__item">
+                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" class="home-preview-gallery__image" alt="大庆精神宣讲课">
+                            <p class="home-preview-gallery__title">大庆精神宣讲课</p>
                         </div>
                     </div>
-                    <a href="videos.html" style="color: var(--primary-red); font-size: 0.9rem; display: block; margin-top: 10px;">更多视频 <i class="fas fa-angle-right"></i></a>
+                    <a href="videos.html" class="home-preview-card__action home-preview-card__action--block">更多视频 <i class="fas fa-angle-right"></i></a>
                 </div>
 
                 <!-- 教学资源 -->
                 <div class="card info-card">
                     <h4><i class="fas fa-file-powerpoint"></i> 热门教学资源</h4>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 0.8rem;">
-                            <i class="far fa-file-pdf" style="color: #e74c3c;"></i> 东北四大精神专题PPT课件
+                    <ul class="home-preview-list">
+                        <li class="home-preview-list__item home-preview-list__item--plain">
+                            <i class="far fa-file-pdf home-preview-resource-icon home-preview-resource-icon--pdf"></i> 东北四大精神专题PPT课件
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <i class="far fa-file-word" style="color: #3498db;"></i> 思政课教学设计：北大荒历史
+                        <li class="home-preview-list__item home-preview-list__item--plain">
+                            <i class="far fa-file-word home-preview-resource-icon home-preview-resource-icon--word"></i> 思政课教学设计：北大荒历史
                         </li>
                     </ul>
-                    <a href="resources.html" style="color: var(--primary-red); font-size: 0.9rem;">下载专区 <i class="fas fa-angle-right"></i></a>
+                    <a href="resources.html" class="home-preview-card__action">下载专区 <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
         </section>
+
+        <div class="project-mark">
+            <strong>项目标识：</strong>佳木斯大学2026年大学生创新创业训练计划红色思政专项项目
+        </div>
     </main>
 
     <footer class="footer">
         <div class="footer-grid">
             <div>
                 <h4>北疆红韵</h4>
-                <p>大学生创新创业项目申报作品</p>
-                <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
+                <p>佳木斯大学2026年大学生创新创业训练计划红色思政专项项目</p>
+                <p class="footer-brand-desc">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
             </div>
             <div>
                 <h4>快速链接</h4>
-                <ul style="list-style: none; line-height: 2;">
+                <ul class="footer-link-list">
                     <li><a href="index.html">首页</a></li>
                     <li><a href="spirit-anti-japanese.html">四大精神</a></li>
                     <li><a href="spirit-longjiang.html">龙江精神</a></li>
@@ -287,7 +240,7 @@
             </div>
             <div>
                 <h4>资源分类</h4>
-                <ul style="list-style: none; line-height: 2;">
+                <ul class="footer-link-list">
                     <li><a href="articles.html">思政图文</a></li>
                     <li><a href="videos.html">视频资源</a></li>
                     <li><a href="resources.html">教学素材</a></li>
@@ -296,14 +249,15 @@
             </div>
             <div>
                 <h4>版权与来源说明</h4>
-                <p style="font-size: 0.85rem;">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
+                <p class="footer-note-text">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 备案号：黑ICP备XXXXXXXX号</p>
+            <p>&copy; 2026 北疆红韵 - 东北红色精神思政资源整合平台 | 佳木斯大学2026年大学生创新创业训练计划红色思政专项项目</p>
         </div>
     </footer>
 
+    <script src="js/portal-data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

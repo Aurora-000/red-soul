@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
@@ -74,257 +73,50 @@
         </div>
     </nav>
 
-    <!-- 1. 顶部轮播/Banner -->
-    <header class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070');">
+    <header class="page-banner" data-banner-image="https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070">
         <div class="banner-content">
             <h1>龙江精神</h1>
-            <p>身在最北方、心向党中央</p>
+            <p>身在最北方，心向党中央</p>
         </div>
     </header>
 
-    <!-- 2. 精神简介 -->
-    <section class="unified-section">
-        <div class="section-container">
-            <div class="section-title">
-                <h2>精神内涵</h2>
-                <div class="divider"></div>
-            </div>
-            <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: var(--shadow);">
-                <p style="text-indent: 2em; font-size: 1.1rem; line-height: 1.8; color: #444;">龙江精神，是在黑龙江这片红色沃土上，由东北抗联精神、北大荒精神、大庆精神、铁人精神共同交织形成的地域性精神谱系。它代表了黑龙江人民在不同历史时期，为国家独立、民族复兴和现代化建设所作出的巨大牺牲与卓越贡献。</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-                    <div style="text-align: center; padding: 20px; background: #FFF5F5; border-radius: 4px;">
-                        <h4 style="color: var(--primary-red);">政治坚定</h4>
-                        <p style="font-size: 0.9rem; margin-top: 10px;">身在最北方，心向党中央，始终保持政治定力。</p>
-                    </div>
-                    <div style="text-align: center; padding: 20px; background: #FFF5F5; border-radius: 4px;">
-                        <h4 style="color: var(--primary-red);">勇于担当</h4>
-                        <p style="font-size: 0.9rem; margin-top: 10px;">在国家最需要的时刻，冲锋在前，承担重任。</p>
-                    </div>
-                    <div style="text-align: center; padding: 20px; background: #FFF5F5; border-radius: 4px;">
-                        <h4 style="color: var(--primary-red);">开拓创新</h4>
-                        <p style="font-size: 0.9rem; margin-top: 10px;">在严酷环境下，坚持科技自强，不断实现新突破。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main class="portal-shell" data-page-kind="spirit" data-spirit-key="longjiang"></main>
 
-    <!-- 3. 代表人物 (图文严格对应) -->
-    <section class="unified-section">
+    <footer class="footer">
         <div class="section-container">
-            <div class="section-title">
-                <h2>龙江楷模</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="people-grid">
-                <div class="card people-card">
-                    <div class="people-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?q=80&w=1887" class="people-img" alt="马恒昌">
-                    </div>
-                    <div class="people-info">
-                        <h3>马恒昌</h3>
-                        <span class="role">全国著名劳动模范</span>
-                        <p>马恒昌小组的创始人。他带领小组在抗美援朝时期发起全国劳动竞赛，创造了多项工业生产记录，体现了“喊破嗓子不如做出样子”的务实精神。</p>
-                    </div>
-                </div>
-                <div class="card people-card">
-                    <div class="people-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925" class="people-img" alt="翟志刚">
-                    </div>
-                    <div class="people-info">
-                        <h3>翟志刚</h3>
-                        <span class="role">航天英雄 (黑龙江籍)</span>
-                        <p>中国首位进行太空行走的航天员。作为龙江儿女，他展现了新时代龙江人追求卓越、勇攀科技高峰的进取精神，是龙江人的骄傲。</p>
-                    </div>
-                </div>
-                <div class="card people-card">
-                    <div class="people-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=1887" class="people-img" alt="刘永坦">
-                    </div>
-                    <div class="people-info">
-                        <h3>刘永坦</h3>
-                        <span class="role">国家最高科学技术奖获得者</span>
-                        <p>哈工大教授，雷达专家。他扎根龙江六十载，带领团队实现我国对海远距离探测技术的重大突破，诠释了新时代的科学家精神。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. 红色地标 -->
-    <section class="unified-section">
-        <div class="section-container">
-            <div class="section-title">
-                <h2>红色地标巡礼</h2>
-                <div class="divider"></div>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2070" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 15px;">
-                        <h4 style="color: var(--primary-red);">哈尔滨党史纪念馆</h4>
-                        <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">记录了哈尔滨从红色秘密交通站到解放后工业重镇的沧桑巨变。</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 15px;">
-                        <h4 style="color: var(--primary-red);">侵华日军第七三一部队罪证陈列馆</h4>
-                        <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">铭记历史，警示后人，展现了龙江人民不忘国耻、追求和平的坚定信念。</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1518111713580-07718e268a71?q=80&w=2070" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 15px;">
-                        <h4 style="color: var(--primary-red);">黑龙江省革命博物馆</h4>
-                        <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">系统展示了龙江大地波澜壮阔的革命、建设与改革历程。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. 视频专区 -->
-    <section class="unified-section">
-        <div class="section-container">
-            <div class="section-title">
-                <h2>专题视频中心</h2>
-                <div class="divider"></div>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
-                <div class="video-card">
-                    <div class="video-thumb" data-video-url="https://tv.cctv.com/2021/05/18/VIDE0f7fR9U7w6P210518.shtml" data-title="红色地标：哈尔滨">
-                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059">
-                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
-                    </div>
-                    <div style="padding: 20px;">
-                        <h4>《红色地标》：走进哈尔滨</h4>
-                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">时长：25:00 | 来源：央视网</p>
-                        <p style="font-size: 0.85rem; color: #888; margin-top: 8px;">跟随镜头探寻哈尔滨的大街小巷，挖掘隐藏在城市深处的红色记忆。</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-thumb" data-video-url="https://www.12371.cn/special/ljjx/" data-title="龙江楷模故事">
-                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925">
-                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
-                    </div>
-                    <div style="padding: 20px;">
-                        <h4>【新时代楷模】龙江脊梁</h4>
-                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">时长：20:30 | 来源：黑龙江卫视</p>
-                        <p style="font-size: 0.85rem; color: #888; margin-top: 8px;">讲述新时代黑龙江各行各业建设者的奋斗故事，传递龙江正能量。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. 相关文章 (10+ 篇) -->
-    <section class="unified-section">
-        <div class="section-container">
-            <div class="section-title">
-                <h2>权威学习文章</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="article-list">
-                <div class="article-item">
-                    <h4>论龙江精神的生成逻辑与时代价值</h4>
-                    <div class="meta">发表于：2024-04-18 | 来源：黑龙江日报</div>
-                    <p>深刻剖析龙江精神作为地域文化的内核及其对现代化的支撑作用...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>哈工大：扎根龙江、爱国奉献的红色基因</h4>
-                    <div class="meta">发表于：2024-03-12 | 来源：光明日报</div>
-                    <p>讲述一所大学如何与一座城市、一种精神共生共荣的故事...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>马恒昌小组：永不褪色的先锋旗帜</h4>
-                    <div class="meta">发表于：2024-02-25 | 来源：人民日报</div>
-                    <p>回顾马恒昌小组七十余载的奋斗历程，解析其常青的秘密...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>黑龙江红色旅游资源整合与开发策略研究</h4>
-                    <div class="meta">发表于：2024-01-15 | 来源：旅游学刊</div>
-                    <p>探讨如何将红色地标转化为思政教育的生动课堂...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>科学家精神在龙江大地的生动实践</h4>
-                    <div class="meta">发表于：2023-12-05 | 来源：科技日报</div>
-                    <p>报道刘永坦等科学家在寒地黑土上创造的科技奇迹...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>身在最北方 心向党中央：龙江儿女的忠诚本色</h4>
-                    <div class="meta">发表于：2023-11-20 | 来源：共产党员网</div>
-                    <p>解析龙江精神中的政治属性与忠诚基因...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>论龙江精神对东北振兴的精神赋能</h4>
-                    <div class="meta">发表于：2023-10-08 | 来源：经济日报</div>
-                    <p>探讨如何将精神力量转化为推动区域经济发展的实际行动...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>航天英雄翟志刚：从龙江农村走出的太空第一人</h4>
-                    <div class="meta">发表于：2023-09-15 | 来源：新华网</div>
-                    <p>深度专访翟志刚，讲述其成长历程与奋斗心路...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>哈尔滨党史馆里的红色记忆</h4>
-                    <div class="meta">发表于：2023-08-20 | 来源：黑龙江党史网</div>
-                    <p>图文并茂展示哈尔滨党史馆的重要馆藏与历史事件...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-                <div class="article-item">
-                    <h4>龙江精神：新时代奋斗者的精神家园</h4>
-                    <div class="meta">发表于：2023-07-01 | 来源：求是网</div>
-                    <p>总结龙江精神在全面建设社会主义现代化国家中的重要作用...</p>
-                    <a href="#" class="resource-download" style="color: var(--primary-red); display: block; margin-top: 10px;">[点击阅读全文]</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 底部版权 -->
-    <footer class="footer" style="background: #1a1a1a; color: #ddd; padding: 60px 0 20px;">
-        <div class="section-container">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px;">
+            <div class="footer-grid">
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">北疆红韵</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.8;">大学生创新创业项目申报作品。致力于东北红色精神的数字化集成与思政教育资源整合，打造一站式科普学习平台。</p>
+                    <h4>北疆红韵</h4>
+                    <p class="footer-brand-desc">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">快速链接</h4>
-                    <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem;">
+                    <h4>快速链接</h4>
+                    <ul class="footer-link-list">
                         <li><a href="index.html">首页</a></li>
                         <li><a href="spirit-anti-japanese.html">四大精神</a></li>
                         <li><a href="spirit-longjiang.html">龙江精神</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">资源中心</h4>
-                    <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem;">
+                    <h4>资源中心</h4>
+                    <ul class="footer-link-list">
                         <li><a href="articles.html">思政图文</a></li>
                         <li><a href="videos.html">视频资源</a></li>
                         <li><a href="resources.html">教学素材</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">版权说明</h4>
-                    <p style="font-size: 0.85rem; line-height: 1.8;">素材来源：学习强国、人民网、央视网、黑龙江党史网。内容仅用于公益性科普与思政学习展示，无商业用途。</p>
+                    <h4>版权说明</h4>
+                    <p class="footer-note-text">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
                 </div>
             </div>
-            <div style="text-align: center; border-top: 1px solid #333; margin-top: 40px; padding-top: 20px; font-size: 0.8rem;">
-                <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 申报单位：[您的大学名称]</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 北疆红韵 - 东北红色精神思政资源整合平台 | 佳木斯大学2026年大学生创新创业训练计划红色思政专项项目</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/portal-data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

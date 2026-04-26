@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>思政图文 - 北疆红韵</title>
+    <title>思政图文资源库 - 北疆红韵</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo"><i class="fas fa-landmark"></i> 北疆红韵</a>
@@ -74,218 +73,50 @@
         </div>
     </nav>
 
-    <!-- 顶部 Banner -->
-    <header class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070');">
+    <header class="page-banner" data-banner-image="https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070">
         <div class="banner-content">
             <h1>思政图文资源库</h1>
             <p>权威解读、深度学习、理论武装</p>
         </div>
     </header>
 
-    <!-- 筛选区域 -->
-    <section class="unified-section" style="padding: 30px 0; background: #f9f9f9;">
+    <main class="portal-shell" data-page-kind="listing" data-list-key="articles"></main>
+
+    <footer class="footer">
         <div class="section-container">
-            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-                <button class="filter-btn active">全部</button>
-                <button class="filter-btn">抗联精神</button>
-                <button class="filter-btn">北大荒精神</button>
-                <button class="filter-btn">大庆/铁人精神</button>
-                <button class="filter-btn">理论研究</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 文章列表 -->
-    <section class="unified-section">
-        <div class="section-container">
-            <div class="article-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
-                <!-- 10+ 篇文章 -->
-                <div class="card article-card" data-category="theory">
-                    <div class="people-img-wrapper" style="height: 200px;">
-                        <img src="https://images.unsplash.com/photo-1547841243-eacb14453cd9?q=80&w=2070" class="people-img">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span style="color: var(--secondary-gold); font-size: 0.9rem; font-weight: bold; display: block; margin-bottom: 10px;">[抗联精神]</span>
-                        <h4 style="margin-bottom: 15px; font-size: 1.3rem; color: var(--primary-red); font-weight: 900;">论东北抗联精神的永恒价值</h4>
-                        <p style="font-size: 0.95rem; color: var(--text-mid); height: 80px; overflow: hidden; line-height: 1.6;">深入分析抗联精神在当代社会的转化与应用，探讨其作为中国共产党精神谱系重要组成部分的理论意义...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
-                            <span style="font-size: 0.85rem; color: var(--text-light);">来源：人民网</span>
-                            <a href="#" class="btn-gold" style="padding: 5px 15px; font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card" data-category="theory">
-                    <div class="people-img-wrapper" style="height: 200px;">
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070" class="people-img">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span style="color: var(--secondary-gold); font-size: 0.9rem; font-weight: bold; display: block; margin-bottom: 10px;">[北大荒精神]</span>
-                        <h4 style="margin-bottom: 15px; font-size: 1.3rem; color: var(--primary-red); font-weight: 900;">北大荒：从苍茫荒原到中华大粮仓</h4>
-                        <p style="font-size: 0.95rem; color: var(--text-mid); height: 80px; overflow: hidden; line-height: 1.6;">纪录三代垦荒人的艰苦创业历程与辉煌成就，解析北大荒如何成为维护国家粮食安全的压舱石...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
-                            <span style="font-size: 0.85rem; color: var(--text-light);">来源：新华社</span>
-                            <a href="#" class="btn-gold" style="padding: 5px 15px; font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 其他文章同理，应用卡片设计 -->
-            </div>
-        </div>
-    </section>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dee6b?q=80&w=2070" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[大庆精神]</span>
-                        <h4 style="margin: 10px 0;">石油之魂：大庆精神的时代传承</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">探讨大庆精神如何激励新时代能源工作者...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：学习强国</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1887" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[铁人精神]</span>
-                        <h4 style="margin: 10px 0;">铁人王进喜：新中国工人的光辉榜样</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">回顾王进喜同志的生平事迹及其对精神谱系的贡献...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：共产党员网</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?q=80&w=1887" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[龙江精神]</span>
-                        <h4 style="margin: 10px 0;">身在最北方 心向党中央</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">新时代龙江儿女忠诚奉献的政治本色解析...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：黑龙江日报</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[理论研究]</span>
-                        <h4 style="margin: 10px 0;">红色精神融入高校思政课的路径探析</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">关于如何提升思政教育实效性的学术研究...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：中国高校教育</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1444653300602-167b43c71670?q=80&w=2070" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[抗联精神]</span>
-                        <h4 style="margin: 10px 0;">赵一曼：甘将热血沃中华</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">巾帼英雄赵一曼的狱中斗争与英勇就义实录...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：黑龙江党史网</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1523240715634-d1c651177e4d?q=80&w=2070" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[理论研究]</span>
-                        <h4 style="margin: 10px 0;">论东北红色文化的数字化保护与传播</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">探讨新媒体时代红色文化的传播策略...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：求是网</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2070" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[铁人精神]</span>
-                        <h4 style="margin: 10px 0;">“三老四严”：大庆人的作风根基</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">解析大庆石油人的优良传统与工作作风...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：中国石油报</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card article-card">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070" style="width: 100%; height: 180px; object-fit: cover;">
-                    <div style="padding: 20px;">
-                        <span style="color: var(--primary-red); font-size: 0.8rem; font-weight: bold;">[北大荒精神]</span>
-                        <h4 style="margin: 10px 0;">梁军：新中国第一位女拖拉机手</h4>
-                        <p style="font-size: 0.85rem; color: #666; height: 60px; overflow: hidden;">壹元人民币原型背后的北大荒创业故事...</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
-                            <span style="font-size: 0.8rem; color: #999;">来源：光明日报</span>
-                            <a href="#" class="read-more" style="color: var(--primary-red); font-size: 0.85rem;">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 分页 -->
-            <div style="text-align: center; margin-top: 50px;">
-                <div class="pagination">
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#"><i class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 底部版权 -->
-    <footer class="footer" style="background: #1a1a1a; color: #ddd; padding: 60px 0 20px;">
-        <div class="section-container">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px;">
+            <div class="footer-grid">
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">北疆红韵</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.8;">大学生创新创业项目申报作品。致力于东北红色精神的数字化集成与思政教育资源整合，打造一站式科普学习平台。</p>
+                    <h4>北疆红韵</h4>
+                    <p class="footer-brand-desc">聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。</p>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">快速链接</h4>
-                    <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem;">
+                    <h4>快速链接</h4>
+                    <ul class="footer-link-list">
                         <li><a href="index.html">首页</a></li>
                         <li><a href="spirit-anti-japanese.html">四大精神</a></li>
                         <li><a href="spirit-longjiang.html">龙江精神</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">资源中心</h4>
-                    <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem;">
+                    <h4>资源中心</h4>
+                    <ul class="footer-link-list">
                         <li><a href="articles.html">思政图文</a></li>
                         <li><a href="videos.html">视频资源</a></li>
                         <li><a href="resources.html">教学素材</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 20px;">版权说明</h4>
-                    <p style="font-size: 0.85rem; line-height: 1.8;">素材来源：学习强国、人民网、央视网、黑龙江党史网。内容仅用于公益性科普与思政学习展示，无商业用途。</p>
+                    <h4>版权说明</h4>
+                    <p class="footer-note-text">素材来源：人民网、新华网、黑龙江党史网、学习强国等官方平台。内容仅用于思政学习展示，无商业用途。</p>
                 </div>
             </div>
-            <div style="text-align: center; border-top: 1px solid #333; margin-top: 40px; padding-top: 20px; font-size: 0.8rem;">
-                <p>&copy; 2024 北疆红韵 - 东北红色精神思政资源整合平台 | 申报单位：[您的大学名称]</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 北疆红韵 - 东北红色精神思政资源整合平台 | 佳木斯大学2026年大学生创新创业训练计划红色思政专项项目</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/portal-data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
