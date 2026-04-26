@@ -83,7 +83,8 @@ const createPoster = ({
         </svg>
     `;
 
-    return POSTER_BUILD_MODE ? svgToDataUri(svg) : toPosterAssetPath(svg);
+    const normalizedSvg = svg.trim();
+    return POSTER_BUILD_MODE ? svgToDataUri(normalizedSvg) : toPosterAssetPath(normalizedSvg);
 };
 
 const createPortraitPoster = ({ name, role, summary, eyebrow, accent = "#f7d774", background = "#651018" }) =>
