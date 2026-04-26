@@ -242,6 +242,94 @@ window.PortalData = {
             sourceUrl: "http://m.hljnews.cn/whly/content/2026-03/26/content_885956.html",
             preferredAssetType: "纪念馆外景 / 主雕塑图",
             note: "来源页对铁人王进喜纪念馆外观、序厅和展陈有完整描述，适合继续替换官方公开图。"
+        },
+        "anti-japanese-camp-site": {
+            title: "抗联战士宿营地遗址",
+            category: "历史场景",
+            sourceName: "央视网《东北抗联》专题",
+            sourceUrl: "https://tv.cctv.com/special/dbkl/index.shtml",
+            preferredAssetType: "密林宿营地实景 / 遗址保护点照片",
+            note: "可优先替换为央视专题页或地方纪念馆公开的宿营地遗址、密林战斗环境图片。"
+        },
+        "anti-japanese-communication-station": {
+            title: "密营通讯站复原图",
+            category: "历史场景",
+            sourceName: "央视网《东北抗联》专题",
+            sourceUrl: "https://tv.cctv.com/special/dbkl/index.shtml",
+            preferredAssetType: "密营复原展陈图 / 后方保障节点图",
+            note: "适合对接抗联主题纪念馆、博物馆的密营复原展陈公开图片。"
+        },
+        "anti-japanese-route-map": {
+            title: "抗联14年路线示意",
+            category: "历史场景",
+            sourceName: "央视网《东北抗联》专题",
+            sourceUrl: "https://tv.cctv.com/special/dbkl/index.shtml",
+            preferredAssetType: "历史路线图 / 战略转移示意图",
+            note: "后续可替换为抗联专题纪录片、党史展陈中的官方路线图。"
+        },
+        "beidahuang-wasteland": {
+            title: "茫茫荒原",
+            category: "历史场景",
+            sourceName: "央视网《国家记忆》北大荒专题",
+            sourceUrl: "https://tv.cctv.com/special/bdh/index.shtml",
+            preferredAssetType: "开发前荒原旧照 / 沼泽湿地历史图",
+            note: "适合替换为北大荒开发前原始地貌旧照或纪录片历史截图。"
+        },
+        "beidahuang-granary": {
+            title: "中华大粮仓",
+            category: "历史场景",
+            sourceName: "北大荒集团",
+            sourceUrl: "https://www.chinabdh.com/h-nd-497.html",
+            preferredAssetType: "现代农场航拍 / 粮仓收获场景图",
+            note: "可优先选用北大荒集团公开的现代农业基地、稻田和机械化收获图片。"
+        },
+        "daqing-pumping-unit": {
+            title: "抽油机（磕头机）",
+            category: "历史场景",
+            sourceName: "光明网",
+            sourceUrl: "https://tech.gmw.cn/ny/2023-10/09/content_36879740.htm",
+            preferredAssetType: "油田井场抽油机群像 / 工业地景图",
+            note: "来源页含大庆油田井场相关图片线索，适合替换为抽油机标志性景观图。"
+        },
+        "daqing-gandalai": {
+            title: "干打垒精神",
+            category: "历史场景",
+            sourceName: "黑龙江新闻网",
+            sourceUrl: "http://m.hljnews.cn/whly/content/2026-03/26/content_885956.html",
+            preferredAssetType: "干打垒旧址 / 会战生活场景复原图",
+            note: "可优先替换为铁人纪念馆、会战旧址公开的干打垒实景或复原图片。"
+        },
+        "ironman-comrades": {
+            title: "铁人战友群体",
+            category: "人物群像",
+            sourceName: "光明网",
+            sourceUrl: "https://tech.gmw.cn/ny/2023-10/09/content_36879740.htm",
+            preferredAssetType: "石油工人群像照 / 井队作业合影",
+            note: "适合替换为石油会战时期工人群像、井队会战作业合影。"
+        },
+        "ironman-jump-mud": {
+            title: "铁人纵身跳泥浆",
+            category: "历史场景",
+            sourceName: "共产党员网",
+            sourceUrl: "https://www.12371.cn/special/zgjs/trjs/",
+            preferredAssetType: "跳泥浆历史画面 / 主题展陈图",
+            note: "优先对接王进喜事迹专题、纪念馆展陈中的经典跳泥浆场景。"
+        },
+        "ironman-freezing-shift": {
+            title: "零下40度的坚守",
+            category: "历史场景",
+            sourceName: "光明网",
+            sourceUrl: "https://tech.gmw.cn/ny/2023-10/09/content_36879740.htm",
+            preferredAssetType: "极寒井场作业照 / 会战冬季场景图",
+            note: "可替换为大庆油田冬季井场作业或石油会战严寒奋战公开图。"
+        },
+        "daqing-first-oilwell": {
+            title: "大庆第一口油井",
+            category: "历史场景",
+            sourceName: "黑龙江新闻网",
+            sourceUrl: "http://m.hljnews.cn/whly/content/2026-03/26/content_885956.html",
+            preferredAssetType: "第一口油井遗址 / 纪念标识图",
+            note: "适合对接大庆油田工业遗址、纪念馆展陈的第一口井公开图片。"
         }
     },
     siteConfig: {
@@ -769,9 +857,9 @@ window.PortalData = {
                 { name: "八女投江", role: "东北抗联巾帼英雄群体", fact: "科普小字：冷云等八位女战士乌斯浑河畔誓死不降、集体投江。", image: createPortraitPoster({ eyebrow: "东北抗联英雄群像", name: "八女投江", role: "乌斯浑河畔巾帼英烈", summary: ["冷云等八位女战士", "宁死不屈 投江殉国"], background: "#6a1118" }), sourceHintKey: "eight-heroines", description: "冷云等八位东北抗联女战士在乌斯浑河畔誓死不降、集体投江殉国，彰显了崇高的民族气节和革命大义。" }
             ],
             gallery: [
-                { title: "抗联战士宿营地遗址", text: "展现抗联战士在极寒密林中坚持斗争的生存环境。", image: createCoverPoster({ eyebrow: "东北抗联历史场景", title: "抗联战士宿营地遗址", subtitle: "极寒密林中的战斗环境", lines: ["密林宿营", "艰苦坚持"], background: "#611018" }) },
-                { title: "密营通讯站复原图", text: "密营承担储粮、修械、医护和通讯等多重功能。", image: createCoverPoster({ eyebrow: "东北抗联历史场景", title: "密营通讯站复原图", subtitle: "抗联后方保障节点", lines: ["储粮 修械 医护 通讯", "密营体系"], background: "#671018" }) },
-                { title: "抗联14年路线示意", text: "帮助学习者直观理解东北抗联的转战历程。", image: createCoverPoster({ eyebrow: "东北抗联历史场景", title: "抗联14年路线示意", subtitle: "转战白山黑水", lines: ["1931 - 1945", "长期艰苦抗战"], background: "#5d1018" }) }
+                { title: "抗联战士宿营地遗址", text: "展现抗联战士在极寒密林中坚持斗争的生存环境。", image: createCoverPoster({ eyebrow: "东北抗联历史场景", title: "抗联战士宿营地遗址", subtitle: "极寒密林中的战斗环境", lines: ["密林宿营", "艰苦坚持"], background: "#611018" }), sourceHintKey: "anti-japanese-camp-site" },
+                { title: "密营通讯站复原图", text: "密营承担储粮、修械、医护和通讯等多重功能。", image: createCoverPoster({ eyebrow: "东北抗联历史场景", title: "密营通讯站复原图", subtitle: "抗联后方保障节点", lines: ["储粮 修械 医护 通讯", "密营体系"], background: "#671018" }), sourceHintKey: "anti-japanese-communication-station" },
+                { title: "抗联14年路线示意", text: "帮助学习者直观理解东北抗联的转战历程。", image: createCoverPoster({ eyebrow: "东北抗联历史场景", title: "抗联14年路线示意", subtitle: "转战白山黑水", lines: ["1931 - 1945", "长期艰苦抗战"], background: "#5d1018" }), sourceHintKey: "anti-japanese-route-map" }
             ],
             videos: [
                 { title: "大型纪录片《东北抗联》第一集", meta: "时长：45:00 | 来源：央视网", description: "系统讲述九一八事变后东北抗日武装如何在党的领导下走向统一。", url: "https://tv.cctv.com/special/dbkl/index.shtml", image: createCoverPoster({ eyebrow: "东北抗联专题视频", title: "《东北抗联》第一集", subtitle: "权威纪录片", lines: ["孤军奋战", "东北抗联统一历程"], background: "#621018" }) },
@@ -795,8 +883,8 @@ window.PortalData = {
                 { name: "梁军", role: "新中国第一位女拖拉机手", fact: "科普小字：北大荒第一代垦荒者代表，壹元纸币人物原型之一。", image: createPortraitPoster({ eyebrow: "北大荒开拓者", name: "梁军", role: "新中国第一位女拖拉机手", summary: ["壹元纸币人物原型之一", "北大荒女性劳动者代表"], background: "#781a12" }), sourceHintKey: "liang-jun", description: "北大荒第一代垦荒者代表，以顽强劳动精神和鲜明女性形象成为新中国农业建设的标志性人物。" }
             ],
             gallery: [
-                { title: "【昔】茫茫荒原", text: "展现开发前北大荒自然环境的艰苦状态。", image: createCoverPoster({ eyebrow: "北大荒历史场景", title: "茫茫荒原", subtitle: "开发前的自然环境", lines: ["荒原 沼泽 寒地", "艰苦创业起点"], background: "#6a1712" }) },
-                { title: "【今】中华大粮仓", text: "展示现代化农业基地建设成果和黑土地新貌。", image: createCoverPoster({ eyebrow: "北大荒历史场景", title: "中华大粮仓", subtitle: "现代农业基地成果", lines: ["黑土地新貌", "国家粮食安全"], background: "#731a12" }) }
+                { title: "【昔】茫茫荒原", text: "展现开发前北大荒自然环境的艰苦状态。", image: createCoverPoster({ eyebrow: "北大荒历史场景", title: "茫茫荒原", subtitle: "开发前的自然环境", lines: ["荒原 沼泽 寒地", "艰苦创业起点"], background: "#6a1712" }), sourceHintKey: "beidahuang-wasteland" },
+                { title: "【今】中华大粮仓", text: "展示现代化农业基地建设成果和黑土地新貌。", image: createCoverPoster({ eyebrow: "北大荒历史场景", title: "中华大粮仓", subtitle: "现代农业基地成果", lines: ["黑土地新貌", "国家粮食安全"], background: "#731a12" }), sourceHintKey: "beidahuang-granary" }
             ],
             videos: [
                 { title: "《国家记忆》：北大荒第一犁", meta: "时长：30:00 | 来源：央视网", description: "回望改写黑土地命运的开发建设历程。", url: "https://tv.cctv.com/special/bdh/index.shtml", image: createCoverPoster({ eyebrow: "北大荒专题视频", title: "北大荒第一犁", subtitle: "国家记忆专题封面", lines: ["黑土地命运改变", "垦荒建设历程"], background: "#6f1812" }) }
@@ -819,9 +907,9 @@ window.PortalData = {
                 { name: "李新民", role: "第三代铁人", fact: "科普小字：新时代石油战线先进典型，持续传承铁人精神。", image: createPortraitPoster({ eyebrow: "大庆精神人物", name: "李新民", role: "第三代铁人", summary: ["新时代石油工人代表", "推动铁人精神传承"], background: "#621019" }), sourceHintKey: "li-xinmin", description: "新时代石油战线先进典型，延续大庆精神和铁人精神的实干作风，展现当代产业工人的奋斗品格。" }
             ],
             gallery: [
-                { title: "抽油机（磕头机）", text: "大庆油田标志性景观，象征工业血脉与国家能源保障。", image: createCoverPoster({ eyebrow: "大庆历史场景", title: "抽油机（磕头机）", subtitle: "大庆油田标志性景观", lines: ["工业血脉", "国家能源保障"], background: "#591018" }) },
+                { title: "抽油机（磕头机）", text: "大庆油田标志性景观，象征工业血脉与国家能源保障。", image: createCoverPoster({ eyebrow: "大庆历史场景", title: "抽油机（磕头机）", subtitle: "大庆油田标志性景观", lines: ["工业血脉", "国家能源保障"], background: "#591018" }), sourceHintKey: "daqing-pumping-unit" },
                 { title: "铁人纪念馆", text: "系统展示王进喜生平与大庆精神形成发展历程。", image: createCoverPoster({ eyebrow: "大庆历史场景", title: "铁人纪念馆", subtitle: "王进喜生平与精神谱系", lines: ["人物纪念馆", "大庆精神形成历程"], background: "#611018" }), sourceHintKey: "ironman-museum" },
-                { title: "干打垒精神", text: "体现先生产后生活、艰苦创业的石油会战作风。", image: createCoverPoster({ eyebrow: "大庆历史场景", title: "干打垒精神", subtitle: "先生产后生活的会战作风", lines: ["艰苦创业", "石油会战传统"], background: "#661118" }) }
+                { title: "干打垒精神", text: "体现先生产后生活、艰苦创业的石油会战作风。", image: createCoverPoster({ eyebrow: "大庆历史场景", title: "干打垒精神", subtitle: "先生产后生活的会战作风", lines: ["艰苦创业", "石油会战传统"], background: "#661118" }), sourceHintKey: "daqing-gandalai" }
             ],
             videos: [
                 { title: "《国家记忆》：大庆石油会战", meta: "时长：30:15 | 来源：央视网", description: "重温石油大会战的波澜壮阔历程，理解大庆精神的时代底色。", url: "https://tv.cctv.com/2021/06/22/VIDEmL7rP3n7fR9U7w6P210622.shtml", image: createCoverPoster({ eyebrow: "大庆专题视频", title: "大庆石油会战", subtitle: "国家记忆专题封面", lines: ["工业报国史诗", "石油大会战"], background: "#5b1018" }) },
@@ -841,12 +929,12 @@ window.PortalData = {
             ],
             people: [
                 { name: "王进喜", role: "1205钻井队首任队长", fact: "科普小字：提出“宁肯少活二十年，拼命也要拿下大油田”。", image: createPortraitPoster({ eyebrow: "铁人精神人物", name: "王进喜", role: "1205钻井队首任队长", summary: ["铁人精神核心人物", "拼命拿下大油田"], background: "#5d1018" }), sourceHintKey: "wang-jinxi", description: "以生命践行“宁肯少活二十年，拼命也要拿下大油田”的誓言，是铁人精神最鲜明的代表人物。" },
-                { name: "铁人战友群体", role: "石油战线英雄模范", fact: "科普小字：人拉肩扛奋战荒原，构成铁人精神的集体群像。", image: createPortraitPoster({ eyebrow: "铁人精神群像", name: "铁人战友群体", role: "石油战线英雄模范", summary: ["人拉肩扛荒原会战", "夯实国家工业基础"], background: "#671119" }), description: "石油大会战中的劳动模范群体，以人拉肩扛、苦干实干的作风共同塑造了铁人精神的集体底色。" }
+                { name: "铁人战友群体", role: "石油战线英雄模范", fact: "科普小字：人拉肩扛奋战荒原，构成铁人精神的集体群像。", image: createPortraitPoster({ eyebrow: "铁人精神群像", name: "铁人战友群体", role: "石油战线英雄模范", summary: ["人拉肩扛荒原会战", "夯实国家工业基础"], background: "#671119" }), sourceHintKey: "ironman-comrades", description: "石油大会战中的劳动模范群体，以人拉肩扛、苦干实干的作风共同塑造了铁人精神的集体底色。" }
             ],
             gallery: [
-                { title: "铁人纵身跳泥浆", text: "成为铁人精神最具震撼力和感染力的历史瞬间。", image: createCoverPoster({ eyebrow: "铁人精神历史场景", title: "铁人纵身跳泥浆", subtitle: "压井喷关键瞬间", lines: ["王进喜典型事迹", "铁人精神象征"], background: "#5a1018" }) },
-                { title: "零下40度的坚守", text: "展现石油工人在极端环境中保持钻机运转的意志。", image: createCoverPoster({ eyebrow: "铁人精神历史场景", title: "零下40度的坚守", subtitle: "极寒环境中的会战作风", lines: ["严寒奋战", "顽强意志"], background: "#611018" }) },
-                { title: "大庆第一口油井", text: "见证中国从“贫油国”迈向“产油大国”的历史跨越。", image: createCoverPoster({ eyebrow: "铁人精神历史场景", title: "大庆第一口油井", subtitle: "石油工业历史跨越", lines: ["从贫油国到产油大国", "会战标志性成果"], background: "#671119" }) }
+                { title: "铁人纵身跳泥浆", text: "成为铁人精神最具震撼力和感染力的历史瞬间。", image: createCoverPoster({ eyebrow: "铁人精神历史场景", title: "铁人纵身跳泥浆", subtitle: "压井喷关键瞬间", lines: ["王进喜典型事迹", "铁人精神象征"], background: "#5a1018" }), sourceHintKey: "ironman-jump-mud" },
+                { title: "零下40度的坚守", text: "展现石油工人在极端环境中保持钻机运转的意志。", image: createCoverPoster({ eyebrow: "铁人精神历史场景", title: "零下40度的坚守", subtitle: "极寒环境中的会战作风", lines: ["严寒奋战", "顽强意志"], background: "#611018" }), sourceHintKey: "ironman-freezing-shift" },
+                { title: "大庆第一口油井", text: "见证中国从“贫油国”迈向“产油大国”的历史跨越。", image: createCoverPoster({ eyebrow: "铁人精神历史场景", title: "大庆第一口油井", subtitle: "石油工业历史跨越", lines: ["从贫油国到产油大国", "会战标志性成果"], background: "#671119" }), sourceHintKey: "daqing-first-oilwell" }
             ],
             videos: [
                 { title: "英雄模范：铁人王进喜", meta: "时长：15:45 | 来源：共产党员网", description: "通过访谈与史料还原最真实的铁人形象。", url: "https://www.12371.cn/special/zgjs/trjs/", image: createPortraitPoster({ eyebrow: "铁人专题视频", name: "王进喜", role: "英雄模范", summary: ["访谈与史料还原", "铁人形象"], background: "#5d1018" }) },
