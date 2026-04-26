@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const portalData = getPortalData();
     const siteConfig = portalData?.siteConfig || {};
     const homePageConfig = portalData?.homePage || {};
+    const siteBackgrounds = portalData?.siteBackgrounds || {};
     const metricRanges = siteConfig.metricRanges || {};
     const quickStatsCopy = siteConfig.quickStats || {};
     const govChromeCopy = siteConfig.govChrome || {};
@@ -1269,12 +1270,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    const syncSiteBackgrounds = () => {
+        const globalBackground = siteBackgrounds.global;
+        if (globalBackground) {
+            document.body.style.setProperty("--site-bg-image", `url('${globalBackground}')`);
+        }
+    };
+
     const syncDataBannerImages = () => {
         const resolveBannerImage = () => {
             if (!portalData) return "";
 
+            const mappedBanner = siteBackgrounds.pageBanners?.[pathname];
             const bannerMap = {
-                "about.html": portalData.aboutPage?.banner?.image,
+                "about.html": mappedBanner || portalData.aboutPage?.banner?.image,
                 "spirit-anti-japanese.html": portalData.spirits?.antiJapanese?.gallery?.[0]?.image || portalData.homePage?.heroSlides?.[0]?.image,
                 "spirit-beidahuang.html": portalData.spirits?.beidahuang?.gallery?.[0]?.image || portalData.homePage?.heroSlides?.[1]?.image,
                 "spirit-daqing.html": portalData.spirits?.daqing?.gallery?.[0]?.image || portalData.homePage?.heroSlides?.[2]?.image,
@@ -1287,7 +1296,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "videos.html": portalData.videos?.categories?.[0]?.items?.[0]?.image || portalData.homePage?.heroSlides?.[0]?.image
             };
 
-            return bannerMap[pathname] || "";
+            return mappedBanner || bannerMap[pathname] || "";
         };
 
         document.querySelectorAll("[data-banner-image]").forEach((section) => {
@@ -1357,6 +1366,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initBackToTop();
     syncVideoDropdown();
     injectGovChrome();
+    syncSiteBackgrounds();
     syncDataBannerImages();
     syncHomepageContent();
     injectHomeQuickStats();

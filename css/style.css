@@ -35,10 +35,14 @@ body {
     color: var(--text-dark);
     line-height: 1.8;
     background:
+        linear-gradient(180deg, rgba(248, 243, 237, 0.92), rgba(253, 251, 247, 0.94)),
         radial-gradient(circle at top left, rgba(200, 16, 46, 0.08), transparent 25%),
         radial-gradient(circle at 85% 15%, rgba(212, 175, 55, 0.08), transparent 20%),
+        var(--site-bg-image, none),
         url("https://www.transparenttextures.com/patterns/pinstriped-suit.png"),
         linear-gradient(180deg, #f8f3ed 0%, #fdfbf7 35%, #faf7f2 100%);
+    background-position: center, top left, 85% 15%, center top, center, center;
+    background-size: auto, auto, auto, cover, auto, auto;
     background-attachment: fixed;
     position: relative;
 }

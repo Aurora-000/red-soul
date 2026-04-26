@@ -113,8 +113,31 @@ const createCoverPoster = ({ title, subtitle, lines, eyebrow, accent = "#f7d774"
         panel: "#a01d26"
     });
 
+const SITE_BACKGROUNDS = {
+    global: "assets/backgrounds/banner-2.webp",
+    heroSlides: [
+        "assets/backgrounds/hero-1.webp",
+        "assets/backgrounds/hero-2.webp",
+        "assets/backgrounds/hero-3.webp"
+    ],
+    pageBanners: {
+        "about.html": "assets/backgrounds/banner-1.webp",
+        "spirit-anti-japanese.html": "assets/backgrounds/banner-1.webp",
+        "spirit-beidahuang.html": "assets/backgrounds/banner-2.webp",
+        "spirit-daqing.html": "assets/backgrounds/banner-3.webp",
+        "spirit-ironman.html": "assets/backgrounds/banner-4.webp",
+        "spirit-longjiang.html": "assets/backgrounds/banner-5.webp",
+        "articles.html": "assets/backgrounds/banner-1.webp",
+        "literature.html": "assets/backgrounds/banner-2.webp",
+        "classroom.html": "assets/backgrounds/banner-3.webp",
+        "resources.html": "assets/backgrounds/banner-4.webp",
+        "videos.html": "assets/backgrounds/banner-5.webp"
+    }
+};
+
 window.PortalData = {
     projectText: "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目",
+    siteBackgrounds: SITE_BACKGROUNDS,
     assetSourceRegistry: {
         "yang-jingyu": {
             title: "杨靖宇",
@@ -373,38 +396,21 @@ window.PortalData = {
                 subtitle: "东北红色精神思政资源整合平台",
                 ctaLabel: "开启学习之旅",
                 ctaHref: "#spirit-intro",
-                image: createCoverPoster({
-                    eyebrow: "红色思政资源整合平台",
-                    title: "北疆红韵",
-                    subtitle: "东北红色精神思政资源整合平台",
-                    lines: ["东北抗联精神 | 北大荒精神", "大庆精神 | 铁人精神 | 龙江精神"]
-                })
+                image: SITE_BACKGROUNDS.heroSlides[0]
             },
             {
                 title: "北大荒精神",
                 subtitle: "艰苦奋斗、勇于开拓的创业史诗",
                 ctaLabel: "深入了解",
                 ctaHref: "spirit-beidahuang.html",
-                image: createCoverPoster({
-                    eyebrow: "北大荒精神",
-                    title: "艰苦奋斗 勇于开拓",
-                    subtitle: "北大荒建设主题海报",
-                    lines: ["开拓者群像", "黑土地垦荒史诗"],
-                    background: "#5e1713"
-                })
+                image: SITE_BACKGROUNDS.heroSlides[1]
             },
             {
                 title: "大庆/铁人精神",
                 subtitle: "宁肯少活二十年，拼命拿下大油田",
                 ctaLabel: "进入专题",
                 ctaHref: "spirit-daqing.html",
-                image: createCoverPoster({
-                    eyebrow: "大庆精神 / 铁人精神",
-                    title: "工业报国",
-                    subtitle: "大庆石油会战主题海报",
-                    lines: ["爱国 创业 求实 奉献", "宁肯少活二十年"],
-                    background: "#5a1115"
-                })
+                image: SITE_BACKGROUNDS.heroSlides[2]
             }
         ],
         spiritIntro: {
@@ -498,13 +504,7 @@ window.PortalData = {
         banner: {
             title: "项目介绍",
             subtitle: "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目 · 红色思政数字化资源整合平台",
-            image: createCoverPoster({
-                eyebrow: "项目介绍",
-                title: "北疆红韵",
-                subtitle: "红色思政数字化资源整合平台",
-                lines: ["佳木斯大学2026年大学生创新创业训练计划", "红色思政专项项目"],
-                background: "#6d1119"
-            })
+            image: SITE_BACKGROUNDS.pageBanners["about.html"]
         },
         header: {
             title: "关于“北疆红韵”项目",
