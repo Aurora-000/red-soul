@@ -661,6 +661,10 @@ img {
     gap: 30px;
 }
 
+#spirit-intro .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .people-card {
     display: flex;
     flex-direction: column;

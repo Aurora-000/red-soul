@@ -4,7 +4,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    const DEFAULT_PROJECT_TEXT = "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目";
+    const DEFAULT_PROJECT_TEXT = "东北红色精神思政资源整合平台";
     const IMAGE_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=";
     const pathname = window.location.pathname.split("/").pop() || "index.html";
     const query = new URLSearchParams(window.location.search);
@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const SITE_TOTAL_VISITS = siteConfig.totalVisits || "6.8万+";
     const DEFAULT_HOME_HERO_SLIDES = [
         {
-            title: "北疆红韵",
-            subtitle: "东北红色精神思政资源整合平台",
-            ctaLabel: "开启学习之旅",
-            ctaHref: "#spirit-intro",
+            title: "东北抗联精神",
+            subtitle: "赵一曼等抗联英烈以生命铸就白山黑水的精神丰碑",
+            ctaLabel: "进入专题",
+            ctaHref: "spirit-anti-japanese.html",
             image: IMAGE_PLACEHOLDER
         },
         {
@@ -37,10 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
             image: IMAGE_PLACEHOLDER
         },
         {
-            title: "大庆/铁人精神",
-            subtitle: "宁肯少活二十年，拼命拿下大油田",
+            title: "大庆精神",
+            subtitle: "石油大会战激荡起爱国、创业、求实、奉献的工业史诗",
             ctaLabel: "进入专题",
             ctaHref: "spirit-daqing.html",
+            image: IMAGE_PLACEHOLDER
+        },
+        {
+            title: "铁人精神",
+            subtitle: "王进喜挺起民族工业脊梁，树起工人阶级精神坐标",
+            ctaLabel: "进入专题",
+            ctaHref: "spirit-ironman.html",
             image: IMAGE_PLACEHOLDER
         }
     ];
@@ -300,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="video-side-label">专题播放数据</p>
                         <div class="video-side-count"></div>
                         <p class="video-side-description"></p>
-                        <div class="video-side-project">项目标识：${PROJECT_TEXT}</div>
+                        <div class="video-side-project">平台说明：权威思政资源整合展示</div>
                     </aside>
                 </div>
             </div>
@@ -408,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     title: item.title,
                     meta,
                     body: item.body || item.summary,
-                    footer: `项目来源标注：${PROJECT_TEXT}`
+                    footer: `平台说明：内容依据公开权威资料整理展示`
                 });
             });
         });
@@ -701,9 +708,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             `
                         )
                         .join("")}
-                    <div class="project-mark">
-                        <strong>项目标识：</strong>${PROJECT_TEXT}
-                    </div>
                 </div>
             </section>
         `;
@@ -887,7 +891,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     title: article.title,
                     meta: `${article.meta} | 阅读量：${getArticleReadCount(`${spiritKey}-${article.title}`)}`,
                     body: article.body || article.summary,
-                    footer: `项目来源标注：${PROJECT_TEXT}`
+                    footer: `平台说明：内容依据公开权威资料整理展示`
                 });
             });
         });
@@ -915,18 +919,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <section class="unified-section">
                 <div class="section-container">
                     <div class="section-header">
-                        <h2>${about.header?.title || "关于项目"}</h2>
+                        <h2>${about.header?.title || "关于平台"}</h2>
                         <p>${about.header?.subtitle || ""}</p>
-                    </div>
-                    <div class="project-mark about-project-mark">
-                        <strong>项目标识：</strong>${PROJECT_TEXT}
                     </div>
                 </div>
             </section>
             <section class="unified-section">
                 <div class="section-container">
                     <div class="intro-card">
-                        <h3><i class="${about.mission?.icon || "fas fa-bullseye"}"></i> ${about.mission?.title || "项目研发意义"}</h3>
+                        <h3><i class="${about.mission?.icon || "fas fa-bullseye"}"></i> ${about.mission?.title || "平台建设意义"}</h3>
                         <p>${about.mission?.body || ""}</p>
                         <div class="highlight-box">
                             <strong>${about.mission?.highlight || ""}</strong>
@@ -1107,7 +1108,7 @@ document.addEventListener("DOMContentLoaded", () => {
             visitCard.innerHTML = `
                 <span class="stat-label">${quickStatsCopy.siteVisitsLabel || "全站访问总点击量"}</span>
                 <h3>${SITE_TOTAL_VISITS}</h3>
-                <p>${quickStatsCopy.siteVisitsDescription || "大创项目展示专用静态预设数值"}</p>
+                <p>${quickStatsCopy.siteVisitsDescription || "基于站内专题内容生成的静态展示数值"}</p>
             `;
             stats.prepend(visitCard);
         }
@@ -1162,7 +1163,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const spiritCardImages = [
             homePageConfig.heroSlides?.[0]?.image || portalData?.spirits?.antiJapanese?.gallery?.[0]?.image,
             homePageConfig.heroSlides?.[1]?.image || portalData?.spirits?.beidahuang?.gallery?.[0]?.image,
-            homePageConfig.heroSlides?.[2]?.image || portalData?.spirits?.daqing?.gallery?.[0]?.image
+            homePageConfig.heroSlides?.[2]?.image || portalData?.spirits?.daqing?.gallery?.[0]?.image,
+            homePageConfig.heroSlides?.[3]?.image || portalData?.spirits?.ironman?.gallery?.[0]?.image
         ];
         document.querySelectorAll("#spirit-intro .people-card .people-img").forEach((imageNode, index) => {
             if (spiritCardImages[index]) {
@@ -1309,30 +1311,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const injectProjectMarks = () => {
         document.querySelectorAll(".footer p").forEach((paragraph) => {
-            if (paragraph.textContent.includes("大学生创新创业项目申报作品")) {
+            if (paragraph.textContent.includes("站点示例占位文案")) {
                 paragraph.textContent = PROJECT_TEXT;
             }
 
             if (paragraph.textContent.includes("备案号：黑ICP备XXXXXXXX号") || paragraph.textContent.includes("申报单位：[您的大学名称]")) {
-                paragraph.textContent = `© 2026 ${SITE_NAME} - ${SITE_SUBTITLE} | ${PROJECT_TEXT}`;
+                paragraph.textContent = `© 2026 ${SITE_NAME} - ${SITE_SUBTITLE}`;
             }
         });
-
-        const aboutHeader = document.querySelector(".section-header");
-        if (pathname === "about.html" && aboutHeader && !document.querySelector(".project-mark")) {
-            const projectMark = document.createElement("div");
-            projectMark.className = "project-mark";
-            projectMark.innerHTML = `<strong>项目标识：</strong>${PROJECT_TEXT}`;
-            aboutHeader.insertAdjacentElement("afterend", projectMark);
-        }
-
-        const homeContainer = document.querySelector("main.container");
-        if (pathname === "index.html" && homeContainer && !homeContainer.querySelector(".project-mark")) {
-            const projectMark = document.createElement("div");
-            projectMark.className = "project-mark";
-            projectMark.innerHTML = `<strong>项目标识：</strong>${PROJECT_TEXT}`;
-            homeContainer.appendChild(projectMark);
-        }
 
         const resourcePages = [
             "articles.html",
@@ -1351,7 +1337,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const footer = document.querySelector("footer.footer");
             const tailmark = document.createElement("div");
             tailmark.className = "resource-tailmark";
-            tailmark.textContent = `项目来源标注：${PROJECT_TEXT}。本页内容依据权威红色文化与思政资源进行整合展示，仅用于公益性思政学习、课堂辅助与科普传播。`;
+            tailmark.textContent = "平台说明：本页内容依据权威红色文化与思政资源进行整合展示，仅用于公益性思政学习、课堂辅助与科普传播。";
 
             if (footer) {
                 footer.insertAdjacentElement("beforebegin", tailmark);

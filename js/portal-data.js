@@ -40,7 +40,7 @@ const createPoster = ({
     title = "",
     subtitle = "",
     lines = [],
-    footer = "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目",
+    footer = "北疆红韵思政资源平台",
     background = "#6f0f16",
     panel = "#9d1c24",
     accent = "#f7d774"
@@ -113,20 +113,30 @@ const createCoverPoster = ({ title, subtitle, lines, eyebrow, accent = "#f7d774"
         panel: "#a01d26"
     });
 
+const SITE_COVERS = {
+    antiJapanese: "assets/covers/anti-japanese-zhaoyiman.jpg",
+    beidahuang: "assets/covers/beidahuang-spring-plowing.jpg",
+    daqing: "assets/covers/daqing-oilfield.jpg",
+    ironman: "assets/covers/ironman-wangjinxi.jpg",
+    longjiang: "assets/covers/longjiang-cover.jpg",
+    longjiangFeature: "assets/covers/longjiang-feature.jpg"
+};
+
 const SITE_BACKGROUNDS = {
     global: "assets/backgrounds/banner-2.webp",
     heroSlides: [
-        "assets/backgrounds/hero-1.webp",
-        "assets/backgrounds/hero-2.webp",
-        "assets/backgrounds/hero-3.webp"
+        SITE_COVERS.antiJapanese,
+        SITE_COVERS.beidahuang,
+        SITE_COVERS.daqing,
+        SITE_COVERS.ironman
     ],
     pageBanners: {
         "about.html": "assets/backgrounds/banner-1.webp",
-        "spirit-anti-japanese.html": "assets/backgrounds/banner-1.webp",
-        "spirit-beidahuang.html": "assets/backgrounds/banner-2.webp",
-        "spirit-daqing.html": "assets/backgrounds/banner-3.webp",
-        "spirit-ironman.html": "assets/backgrounds/banner-4.webp",
-        "spirit-longjiang.html": "assets/backgrounds/banner-5.webp",
+        "spirit-anti-japanese.html": SITE_COVERS.antiJapanese,
+        "spirit-beidahuang.html": SITE_COVERS.beidahuang,
+        "spirit-daqing.html": SITE_COVERS.daqing,
+        "spirit-ironman.html": SITE_COVERS.ironman,
+        "spirit-longjiang.html": SITE_COVERS.longjiang,
         "articles.html": "assets/backgrounds/banner-1.webp",
         "literature.html": "assets/backgrounds/banner-2.webp",
         "classroom.html": "assets/backgrounds/banner-3.webp",
@@ -136,7 +146,7 @@ const SITE_BACKGROUNDS = {
 };
 
 window.PortalData = {
-    projectText: "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目",
+    projectText: "东北红色精神思政资源整合平台",
     siteBackgrounds: SITE_BACKGROUNDS,
     assetSourceRegistry: {
         "yang-jingyu": {
@@ -376,7 +386,7 @@ window.PortalData = {
         },
         quickStats: {
             siteVisitsLabel: "全站访问总点击量",
-            siteVisitsDescription: "大创项目展示专用静态预设数值",
+            siteVisitsDescription: "基于站内专题内容生成的静态展示数值",
             articleReadsLabel: "单篇图文阅读量",
             articleReadsDescription: "覆盖思政推文、科普文章、教学文献",
             videoPlaysLabel: "专题视频播放量",
@@ -392,10 +402,10 @@ window.PortalData = {
         metaTitle: "北疆红韵 —— 东北红色精神思政资源整合平台",
         heroSlides: [
             {
-                title: "北疆红韵",
-                subtitle: "东北红色精神思政资源整合平台",
-                ctaLabel: "开启学习之旅",
-                ctaHref: "#spirit-intro",
+                title: "东北抗联精神",
+                subtitle: "赵一曼等抗联英烈以生命铸就白山黑水的精神丰碑",
+                ctaLabel: "进入专题",
+                ctaHref: "spirit-anti-japanese.html",
                 image: SITE_BACKGROUNDS.heroSlides[0]
             },
             {
@@ -406,29 +416,30 @@ window.PortalData = {
                 image: SITE_BACKGROUNDS.heroSlides[1]
             },
             {
-                title: "大庆/铁人精神",
-                subtitle: "宁肯少活二十年，拼命拿下大油田",
+                title: "大庆精神",
+                subtitle: "石油大会战激荡起爱国、创业、求实、奉献的工业史诗",
                 ctaLabel: "进入专题",
                 ctaHref: "spirit-daqing.html",
                 image: SITE_BACKGROUNDS.heroSlides[2]
+            },
+            {
+                title: "铁人精神",
+                subtitle: "王进喜挺起民族工业脊梁，树起工人阶级精神坐标",
+                ctaLabel: "进入专题",
+                ctaHref: "spirit-ironman.html",
+                image: SITE_BACKGROUNDS.heroSlides[3]
             }
         ],
         spiritIntro: {
-            title: "四大核心精神",
-            subtitle: "根植黑土地，铸就中国魂"
+            title: "龙江四大精神",
+            subtitle: "抗联、北大荒、大庆、铁人共同构成黑土地上的红色精神谱系"
         },
         longjiangFeature: {
-            title: "龙江精神 · 薪火相传",
-            description: "黑龙江是一片英雄的土地。从抗联将士的浴血奋战，到垦荒大军的战天斗地；从石油工人的无私奉献，到新时代龙江人的创新突破，这片土地孕育了伟大的龙江精神。",
+            title: "龙江精神专题",
+            description: "龙江精神是立足黑龙江振兴发展实践、对东北抗联精神、北大荒精神、大庆精神与铁人精神的时代延展和综合凝练，可作为首页龙江四大精神学习后的专题延伸。",
             ctaLabel: "进入龙江精神专题",
             ctaHref: "spirit-longjiang.html",
-            image: createCoverPoster({
-                eyebrow: "龙江精神",
-                title: "薪火相传",
-                subtitle: "龙江精神专题展示图",
-                lines: ["最北方的忠诚担当", "红色地标与时代楷模"],
-                background: "#641019"
-            })
+            image: SITE_COVERS.longjiangFeature
         },
         latestSectionTitle: "最新资源速览",
         latestPreviews: {
@@ -487,7 +498,7 @@ window.PortalData = {
                     {
                         icon: "far fa-file-pdf",
                         color: "#e74c3c",
-                        title: "东北四大精神专题PPT课件"
+                        title: "龙江四大精神专题PPT课件"
                     },
                     {
                         icon: "far fa-file-word",
@@ -500,20 +511,20 @@ window.PortalData = {
         footerDescription: "聚焦东北红色精神，整合思政教学资源，打造新时代红色文化传承的数字化平台。"
     },
     aboutPage: {
-        metaTitle: "项目介绍 - 北疆红韵",
+        metaTitle: "平台介绍 - 北疆红韵",
         banner: {
-            title: "项目介绍",
-            subtitle: "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目 · 红色思政数字化资源整合平台",
+            title: "平台介绍",
+            subtitle: "聚焦龙江四大精神与龙江精神的红色思政数字化资源整合平台",
             image: SITE_BACKGROUNDS.pageBanners["about.html"]
         },
         header: {
-            title: "关于“北疆红韵”项目",
-            subtitle: "佳木斯大学2026年大学生创新创业训练计划红色思政专项项目 · 红色思政数字化资源整合平台"
+            title: "关于北疆红韵",
+            subtitle: "面向教学、宣讲、研学与传播的一站式红色思政资源平台"
         },
         mission: {
-            title: "项目研发意义",
+            title: "平台建设意义",
             icon: "fas fa-bullseye",
-            body: "在“大思政课”建设背景下，黑龙江作为中国革命和建设的重要阵地，拥有丰富的红色文化资源。然而，现有资源仍存在分布散、形式旧、获取难等痛点。“北疆红韵”项目通过数字化方式整合东北抗联精神、北大荒精神、大庆精神、铁人精神与龙江精神等核心资源，构建面向教学、宣讲、研学与传播的一站式平台。",
+            body: "在“大思政课”建设背景下，黑龙江作为中国革命和建设的重要阵地，拥有丰富的红色文化资源。然而，现有资源仍存在分布散、形式旧、获取难等痛点。“北疆红韵”通过数字化方式整合东北抗联精神、北大荒精神、大庆精神、铁人精神与龙江精神等核心资源，构建面向教学、宣讲、研学与传播的一站式平台。",
             highlight: "核心目标：让红色文化从“博物馆”走进“云端”，从“书本”走进“学子心田”，实现红色血脉的高效传承。"
         },
         features: {
@@ -554,7 +565,7 @@ window.PortalData = {
             typeLabel: "反馈类型",
             contentLabel: "反馈详情",
             submitLabel: "提交反馈",
-            typeOptions: ["功能建议", "资源报错", "内容补充", "项目合作"]
+            typeOptions: ["功能建议", "资源报错", "内容补充", "平台共建"]
         }
     },
     listings: {
@@ -691,7 +702,7 @@ window.PortalData = {
                         background: "#63121a"
                     }),
                     summary: "围绕平台建设、资源分级、数据组织与传播链路优化，讨论红色文化数字化转型。",
-                    body: "文章指出，门户化平台建设应突出专题聚合、层级化栏目结构和统一的元数据组织方式。\n\n对于高校项目而言，构建集中数据源与页面渲染层，可以明显降低后期维护成本并提升云端更新效率。"
+                    body: "文章指出，门户化平台建设应突出专题聚合、层级化栏目结构和统一的元数据组织方式。\n\n对于资源整合平台而言，构建集中数据源与页面渲染层，可以明显降低后期维护成本并提升云端更新效率。"
                 },
                 {
                     id: "art-008",
@@ -734,7 +745,7 @@ window.PortalData = {
                 { id: "res-004", category: "ppt", icon: "fas fa-file-powerpoint", title: "铁人王进喜英雄事迹PPT", meta: "PPTX | 15.3MB", source: "平台整理", summary: "可用于人物专题讲授、班会宣讲和实践分享展示。", body: "内容包含人物生平、关键场景、精神提炼与时代启示。\n\n适合高校课堂、团日活动和专题宣讲现场投屏使用。", actionLabel: "查看课件说明" },
                 { id: "res-005", category: "quiz", icon: "fas fa-file-circle-question", title: "东北红色精神课堂测评题库", meta: "DOCX | 0.9MB", source: "平台整理", summary: "涵盖单选、多选、简答与讨论题，便于课后巩固。", body: "题库聚焦四大精神与龙江精神核心知识点，并附参考答案与评分建议。\n\n可配合课堂、线上学习或社团培训使用。", actionLabel: "查看题库说明" },
                 { id: "res-006", category: "outline", icon: "fas fa-file-pen", title: "新时代弘扬四大精神宣讲提纲", meta: "DOCX | 1.5MB", source: "平台整理", summary: "为校内宣讲、红色实践活动提供清晰表达框架。", body: "提纲按开场、精神总论、专题案例、现实启示和总结五段式组织。\n\n适合学生宣讲团、辅导员培训和党团活动使用。", actionLabel: "查看提纲说明" },
-                { id: "res-007", category: "plan", icon: "fas fa-file-word", title: "大学生红色文化调研方案", meta: "DOCX | 0.5MB", source: "平台整理", summary: "围绕红色资源调研、访谈设计与数据记录提供模板。", body: "方案包含调研目标、对象筛选、问题设置、成果归纳和展示建议。\n\n可服务课程实践、社会调查和项目申报材料准备。", actionLabel: "查看方案说明" },
+                { id: "res-007", category: "plan", icon: "fas fa-file-word", title: "红色文化调研方案", meta: "DOCX | 0.5MB", source: "平台整理", summary: "围绕红色资源调研、访谈设计与数据记录提供模板。", body: "方案包含调研目标、对象筛选、问题设置、成果归纳和展示建议。\n\n可服务课程实践、社会调查和研学活动准备。", actionLabel: "查看方案说明" },
                 { id: "res-008", category: "quiz", icon: "fas fa-file-circle-check", title: "龙江精神知识问答包", meta: "PDF | 3.1MB", source: "平台整理", summary: "适合团课竞答、专题复习和线上答题活动。", body: "问答包按人物、事件、地标和精神内涵进行分类整理。\n\n适合打造互动式、轻量化的红色思政学习活动。", actionLabel: "查看问答说明" }
             ]
         },
@@ -855,7 +866,7 @@ window.PortalData = {
                 { name: "杨靖宇", role: "东北抗日联军第一路军总司令", fact: "科普小字：南满抗联主要领导人，牺牲时胃中仅有草根树皮棉絮。", image: createPortraitPoster({ eyebrow: "东北抗联英雄", name: "杨靖宇", role: "东北抗联第一路军总司令", summary: ["抗联主要创建者和领导人之一", "白山黑水坚持斗争"], background: "#611018" }), sourceHintKey: "yang-jingyu", description: "东北抗联主要创建者和领导人之一，长期率部坚持南满游击战争，牺牲时胃中仅有草根、树皮和棉絮。" },
                 { name: "赵一曼", role: "东北抗日联军第三军二团政委", fact: "科普小字：被俘后受尽酷刑仍坚贞不屈，《示儿书》广为流传。", image: createPortraitPoster({ eyebrow: "东北抗联英雄", name: "赵一曼", role: "东北抗联著名女英雄", summary: ["示儿书", "宁死不屈的抗日英烈"], background: "#681119" }), sourceHintKey: "zhao-yiman", description: "东北抗联著名女英雄，被俘后受尽酷刑仍坚贞不屈，绝笔家书《示儿书》成为红色家风教育经典文本。" },
                 { name: "赵尚志", role: "东北抗日联军第三军军长", fact: "科普小字：东北抗联重要领导人，被誉为“北满之虎”。", image: createPortraitPoster({ eyebrow: "东北抗联英雄", name: "赵尚志", role: "东北抗联第三军军长", summary: ["北满之虎", "多次粉碎日伪讨伐"], background: "#641018" }), sourceHintKey: "zhao-shangzhi", description: "东北抗联重要领导人，以顽强战斗意志多次粉碎日伪军“讨伐”，被誉为“北满之虎”。" },
-                { name: "八女投江", role: "东北抗联巾帼英雄群体", fact: "科普小字：冷云等八位女战士乌斯浑河畔誓死不降、集体投江。", image: createPortraitPoster({ eyebrow: "东北抗联英雄群像", name: "八女投江", role: "乌斯浑河畔巾帼英烈", summary: ["冷云等八位女战士", "宁死不屈 投江殉国"], background: "#6a1118" }), sourceHintKey: "eight-heroines", description: "冷云等八位东北抗联女战士在乌斯浑河畔誓死不降、集体投江殉国，彰显了崇高的民族气节和革命大义。" }
+                { name: "八女投江", role: "东北抗联巾帼英雄群体", fact: "科普小字：冷云等八位女战士乌斯浑河畔誓死不降、集体投江。", image: "https://img.redocn.com/sheying/20170908/kangrilianjunbanvtoujiangdiaoxiang_8678909.jpg.400.jpg", sourceHintKey: "eight-heroines", description: "冷云等八位东北抗联女战士在乌斯浑河畔誓死不降、集体投江殉国，彰显了崇高的民族气节和革命大义。" }
             ],
             gallery: [
                 { title: "抗联战士宿营地遗址", text: "展现抗联战士在极寒密林中坚持斗争的生存环境。", image: createCoverPoster({ eyebrow: "东北抗联历史场景", title: "抗联战士宿营地遗址", subtitle: "极寒密林中的战斗环境", lines: ["密林宿营", "艰苦坚持"], background: "#611018" }), sourceHintKey: "anti-japanese-camp-site" },
@@ -881,7 +892,7 @@ window.PortalData = {
             ],
             people: [
                 { name: "王震", role: "北大荒事业奠基者", fact: "科普小字：率十万转业官兵开发北大荒，开启大规模垦荒建设。", image: createPortraitPoster({ eyebrow: "北大荒开拓者", name: "王震", role: "率转业官兵开发北大荒", summary: ["十万官兵挺进北大荒", "开启大规模开发建设"], background: "#701812" }), sourceHintKey: "wang-zhen", description: "率领十万转业官兵挺进北大荒，组织大规模开发建设，为北大荒事业奠定重要基础。" },
-                { name: "梁军", role: "新中国第一位女拖拉机手", fact: "科普小字：北大荒第一代垦荒者代表，壹元纸币人物原型之一。", image: createPortraitPoster({ eyebrow: "北大荒开拓者", name: "梁军", role: "新中国第一位女拖拉机手", summary: ["壹元纸币人物原型之一", "北大荒女性劳动者代表"], background: "#781a12" }), sourceHintKey: "liang-jun", description: "北大荒第一代垦荒者代表，以顽强劳动精神和鲜明女性形象成为新中国农业建设的标志性人物。" }
+                { name: "梁军", role: "新中国第一位女拖拉机手", fact: "科普小字：北大荒第一代垦荒者代表，壹元纸币人物原型之一。", image: "https://img.redocn.com/sheying/20210220/dongfanghong54shituolaji_11361839.jpg.400.jpg", sourceHintKey: "liang-jun", description: "北大荒第一代垦荒者代表，以顽强劳动精神和鲜明女性形象成为新中国农业建设的标志性人物。" }
             ],
             gallery: [
                 { title: "【昔】茫茫荒原", text: "展现开发前北大荒自然环境的艰苦状态。", image: createCoverPoster({ eyebrow: "北大荒历史场景", title: "茫茫荒原", subtitle: "开发前的自然环境", lines: ["荒原 沼泽 寒地", "艰苦创业起点"], background: "#6a1712" }), sourceHintKey: "beidahuang-wasteland" },
@@ -904,7 +915,7 @@ window.PortalData = {
             ],
             people: [
                 { name: "王进喜", role: "新中国第一代石油工人", fact: "科普小字：以“跳进泥浆池压井喷”成为铁人精神鲜明象征。", image: createPortraitPoster({ eyebrow: "大庆精神人物", name: "王进喜", role: "新中国第一代石油工人", summary: ["跳入泥浆池压井喷", "铁人精神代表"], background: "#581018" }), sourceHintKey: "wang-jinxi", description: "新中国第一代石油工人杰出代表，以跳入泥浆池压井喷等英雄壮举成为中国工人阶级先锋形象。" },
-                { name: "1205钻井队", role: "钢铁钻井队", fact: "科普小字：创造年钻井进尺十万米纪录，是大庆精神先进集体代表。", image: createPortraitPoster({ eyebrow: "大庆精神集体", name: "1205钻井队", role: "钢铁钻井队", summary: ["年钻井进尺十万米", "大庆精神群体象征"], background: "#5d1018" }), sourceHintKey: "drilling-team-1205", description: "王进喜曾带领的先进钻井集体，创造年钻井进尺十万米纪录，是大庆精神群体传承的重要象征。" },
+                { name: "1205钻井队", role: "钢铁钻井队", fact: "科普小字：创造年钻井进尺十万米纪录，是大庆精神先进集体代表。", image: "https://img.redocn.com/sheying/20151221/yewaizuanjingdui_5627244.jpg.285.jpg", sourceHintKey: "drilling-team-1205", description: "王进喜曾带领的先进钻井集体，创造年钻井进尺十万米纪录，是大庆精神群体传承的重要象征。" },
                 { name: "李新民", role: "第三代铁人", fact: "科普小字：新时代石油战线先进典型，持续传承铁人精神。", image: createPortraitPoster({ eyebrow: "大庆精神人物", name: "李新民", role: "第三代铁人", summary: ["新时代石油工人代表", "推动铁人精神传承"], background: "#621019" }), sourceHintKey: "li-xinmin", description: "新时代石油战线先进典型，延续大庆精神和铁人精神的实干作风，展现当代产业工人的奋斗品格。" }
             ],
             gallery: [
@@ -917,7 +928,7 @@ window.PortalData = {
                 { title: "英雄人物：铁人王进喜", meta: "时长：18:40 | 来源：学习强国", description: "聚焦王进喜的典型事迹与工人阶级精神风貌。", url: "https://www.12371.cn/special/zgjs/trjs/", image: createPortraitPoster({ eyebrow: "铁人人物专题", name: "王进喜", role: "铁人精神典型代表", summary: ["宁肯少活二十年", "拼命拿下大油田"], background: "#611018" }) }
             ],
             articles: [
-                { title: "弘扬大庆精神 走好新时代创业路", meta: "发表于：2026-04-12 | 来源：人民网", summary: "从新时代产业变革语境看大庆精神的现实意义。", body: "文章提出，大庆精神在当代仍是推动创新创业、产业升级与岗位建功的重要精神动力。" },
+                { title: "弘扬大庆精神 走好新时代奋进路", meta: "发表于：2026-04-12 | 来源：人民网", summary: "从新时代产业变革语境看大庆精神的现实意义。", body: "文章提出，大庆精神在当代仍是推动产业升级、岗位建功与实干担当的重要精神动力。" },
                 { title: "“三老四严”：大庆人的优良传统", meta: "发表于：2026-03-20 | 来源：黑龙江党史网", summary: "聚焦大庆精神中的求实作风与组织纪律。", body: "文章通过典型制度和生产案例，说明“三老四严”如何塑造了大庆石油会战的工作方式。" }
             ]
         },
@@ -930,7 +941,7 @@ window.PortalData = {
             ],
             people: [
                 { name: "王进喜", role: "1205钻井队首任队长", fact: "科普小字：提出“宁肯少活二十年，拼命也要拿下大油田”。", image: createPortraitPoster({ eyebrow: "铁人精神人物", name: "王进喜", role: "1205钻井队首任队长", summary: ["铁人精神核心人物", "拼命拿下大油田"], background: "#5d1018" }), sourceHintKey: "wang-jinxi", description: "以生命践行“宁肯少活二十年，拼命也要拿下大油田”的誓言，是铁人精神最鲜明的代表人物。" },
-                { name: "铁人战友群体", role: "石油战线英雄模范", fact: "科普小字：人拉肩扛奋战荒原，构成铁人精神的集体群像。", image: createPortraitPoster({ eyebrow: "铁人精神群像", name: "铁人战友群体", role: "石油战线英雄模范", summary: ["人拉肩扛荒原会战", "夯实国家工业基础"], background: "#671119" }), sourceHintKey: "ironman-comrades", description: "石油大会战中的劳动模范群体，以人拉肩扛、苦干实干的作风共同塑造了铁人精神的集体底色。" }
+                { name: "铁人战友群体", role: "石油战线英雄模范", fact: "科普小字：人拉肩扛奋战荒原，构成铁人精神的集体群像。", image: "https://img.redocn.com/sheying/20160805/shiyougongrenhuizhandiaoxiang_6862157.jpg.400.jpg", sourceHintKey: "ironman-comrades", description: "石油大会战中的劳动模范群体，以人拉肩扛、苦干实干的作风共同塑造了铁人精神的集体底色。" }
             ],
             gallery: [
                 { title: "铁人纵身跳泥浆", text: "成为铁人精神最具震撼力和感染力的历史瞬间。", image: createCoverPoster({ eyebrow: "铁人精神历史场景", title: "铁人纵身跳泥浆", subtitle: "压井喷关键瞬间", lines: ["王进喜典型事迹", "铁人精神象征"], background: "#5a1018" }), sourceHintKey: "ironman-jump-mud" },
